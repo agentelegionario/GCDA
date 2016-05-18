@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="/CavCar/lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<link href="/CavCar/lib/bootstrap-3.1.1-dist/css/personalCss.css"
+		rel="stylesheet" />
+	<!-- <script src="/CavCar/lib/jquery.min.js"></script>
+    	<script src="/CavCar/lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script> -->
+
+	<title>Login</title>
+</h:head>
+<body style="width: 600px; margin: 0 auto">
+	<div class="container-fluid"
+		style="min-Height: 450px; margin-top: 150px">
+		<h:form>
+			<div style="width: 300px; margin: 0 auto;">
+				<h1 style="text-align: center">CAVCAR</h1>
+				SIAP:
+				<h:inputText type="text" value="#{login.usuario.siap}"
+					class="form-control" pt:placeholder="SIAP" required="required"
+					autofocus="autofocus" />
+				Senha:
+				<h:inputSecret type="password" class="form-control"
+					pt:placeholder="Senha" value="#{login.usuario.senha}" />
+				<br />
+				<h:commandButton value="Login"
+					class="btn btn-lg btn-primary btn-block"
+					action="#{login.botaoLogin()}"></h:commandButton>
+				<br />
+				<h:messages errorClass="list-group-item list-group-item-danger"
+					infoClass="list-group-item list-group-item-info"
+					warnClass="list-group-item list-group-item-warning" />
+			</div>
+		</h:form>
+	</div>
+	<div id="footer" style="">
+		<ui:insert>
+			<ui:include src="/footer.xhtml" />
+		</ui:insert>
+	</div>
+</body>
+</html>

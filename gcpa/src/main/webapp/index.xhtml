@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="/CavCar/lib/primefaces-cupertino/theme.css"
+		rel="stylesheet" />
+	<link href="/CavCar/lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<link href="/CavCar/lib/bootstrap-3.1.1-dist/css/personalCss.css"
+		rel="stylesheet" />
+	<!-- <script src="/CavCar/lib/jquery.min.js"></script>
+    	<script src="/CavCar/lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script> -->
+	<title>CAVCAR - Página Inicial</title>
+</h:head>
+<body class="personalWidth">
+	<center>
+		<div class="container-fluid" style="min-Height: 650px">
+			<div id="menu">
+				<ui:insert>
+					<ui:include src="/menu.xhtml" />
+				</ui:insert>
+			</div>
+			<h1 class="page-header">CAVCAR - Página Inicial</h1>
+			<br />
+			<div class="row" align="center">
+				<div class="col-xs-6 col-md-4">
+					<a href="/CavCar/faces/admin/car/searchCar.xhtml" class="thumbnail">
+						<img src="/CavCar/public/img/car_icon_.png" alt="..." />
+					</a>
+					<h3 class="caption">Veículos</h3>
+				</div>
+				<div class="col-xs-6 col-md-4">
+					<a href="/CavCar/faces/admin/driver/searchDriver.xhtml"
+						class="thumbnail"> <img
+						src="/CavCar/public/img/driver_icon_.png" alt="..." />
+					</a>
+					<h3 class="caption">Motoristas</h3>
+				</div>
+				<div class="col-xs-6 col-md-4">
+					<a href="/CavCar/faces/admin/travel/searchTravel.xhtml"
+						class="thumbnail"> <img
+						src="/CavCar/public/img/travel_icon_.png" alt="..." />
+					</a>
+					<h3 class="caption">Autorizações</h3>
+				</div>
+
+			</div>
+		</div>
+		<div id="footer" style="">
+			<ui:insert>
+				<ui:include src="/footer.xhtml" />
+			</ui:insert>
+		</div>
+	</center>
+</body>
+</html>

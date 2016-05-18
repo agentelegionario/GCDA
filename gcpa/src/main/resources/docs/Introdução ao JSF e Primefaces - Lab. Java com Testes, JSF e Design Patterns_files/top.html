@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#minimized -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>ABS</title>
+<link rel="stylesheet"
+	href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/css/app.css">
+<link rel="icon"
+	href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/avira_icon16.png"
+	type="image/png">
+<link rel="shortcut icon" type="image/png"
+	href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/avira_icon16.png">
+<link type="image/png"
+	href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/avira_icon16.png">
+</head>
+<body lang="pt-BR">
+	<div id="top" class="navbar">
+		<div id="Indicators" class="indicators-container">
+			<nav class="indicator-groups">
+				<nav class="indicator-group indicator-group-left">
+					<div class="indicator-outer">
+						<div id="domain-indicator" class="indicator"
+							data-event="Indicator" data-type="Domain">www.caelum.com.br</div>
+					</div>
+				</nav>
+				<nav class="indicator-group indicator-group-center"
+					style="position: relative;">
+					<nav class="indicator-subgroup safety">
+						<div class="indicator-outer active">
+							<a id="classification-indicator" class="indicator"
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#classification"
+								data-event="Indicator" data-type="Classification"> <span
+								class="safe-url"> <img
+									src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/classification_safe.svg"
+									width="25" height="26"> <span class="indicator-text">Site
+										seguro</span>
+							</span>
+							</a>
+						</div>
+						<div class="indicator-outer active"></div>
+						<div class="indicator-outer active">
+							<a id="trackers-indicator" class="indicator"
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#trackers"
+								data-event="Indicator" data-type="Trackers">
+								<div class="blue-dot-container">
+									<div class="blue-dot"></div>
+									<div class="blue-dot-pulsate"></div>
+								</div> <img
+								src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/trackers_icon.svg"
+								width="25" height="26"> <span class="indicator-text"><span
+									class="trackers-count trackers-count-total">3</span>
+									rastreadores</span>
+							</a>
+						</div>
+					</nav>
+					<nav class="indicator-subgroup offers">
+						<div class="indicator-outer active"></div>
+					</nav>
+				</nav>
+				<nav class="indicator-group indicator-group-right">
+					<div class="indicator-outer">
+						<a id="settings-indicator" class="indicator"
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#settings/General"
+							data-event="Indicator" data-type="Settings"> <img
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/settings-24.svg">
+						</a>
+					</div>
+					<div class="indicator-outer active">
+						<a id="dash-indicator" class="indicator"
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#dash"
+							data-event="Indicator" data-type="Dash"> <img
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/expand-arrow.svg">
+						</a>
+					</div>
+					<div class="indicator-outer">
+						<a id="close-indicator" class="indicator close-button"
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							data-event="Indicator" data-type="Close"> <img
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/close.svg"
+							width="16" height="16">
+						</a>
+					</div>
+				</nav>
+			</nav>
+		</div>
+		<div id="Alien" class="shown"></div>
+		<div class="shiftable-container">
+			<div id="Dash" class="dash-container">
+				<section class="dash">
+					<div class="dash-feedback-link">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#feedback"
+							data-event="Indicator" data-type="Feedback"> <img
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_feedback.svg">
+							<span class="black-tip-outer"> <span
+								class="black-tip black-tip-arrow-right"> <span
+									class="inner"> <span>Comentários</span>
+								</span>
+							</span>
+						</span>
+						</a>
+					</div>
+					<div class="dash-carousel-container">
+						<div class="dash-tab">
+							<div class="dash-classification safe">
+								<div class="big-icon"></div>
+								<div class="big-title">Link seguro</div>
+								<div class="info-text">Nenhuma ameaça conhecida.</div>
+								<div class="actions">
+									<a class="button gotosite" href="" target="_top">Ir para o
+										site</a> <a class="button back"
+										href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#">Voltar</a>
+								</div>
+							</div>
+						</div>
+						<div class="dash-tab">
+							<div class="dash-classification safe">
+								<header class="big-icon"></header>
+								<header class="big-title">Site seguro</header>
+								<p class="info-text">Nenhuma ameaça conhecida.</p>
+								<nav class="dash-unsafe-actions">
+									<div id="btn-back" class="abs-button abs-button-bigger">Tire-me
+										daqui!</div>
+									<div class="exception not-exempt">
+										<div
+											class="absb-check abs-button abs-button-bigger abs-button-transparent abs-button-transparent"
+											style="display: inline-block">
+											<span id="btn-exception"> <span class="states">
+													<span class="add active">Adicionar exceção</span> <span
+													class="added"> Exceção adicionada <img
+														src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/white_check.svg"
+														width="10" height="10">
+												</span> <span class="remove">Remover exceção</span> <span
+													class="removed">Exceção removida</span>
+											</span> <span class="domain"></span>
+											</span>
+										</div>
+										<div id="lnk-info"></div>
+										<aside class="info">
+											<div
+												class="tourtip with-pointer point-up point-up-center abs-popup-box">
+												<img class="tour-card-close close-button"
+													src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+												<div class="abs-popup-box-text add">
+													<h2 class="tip-title">Adicionando uma exceção</h2>
+													<p>Este site NÃO está atualmente em sua lista de
+														exceções. Quando você adiciona uma exceção, o endereço não
+														será bloqueado ao tentar visualizá-lo. Você ainda verá a
+														advertência na parte superior da tela.</p>
+												</div>
+												<div class="abs-popup-box-text remove">
+													<h2 class="tip-title">Removendo uma exceção</h2>
+													<p>Este site está atualmente em sua lista de exceções.
+														Se remover a exceção, o endereço será bloqueado sempre que
+														você tentar exibi-lo.</p>
+												</div>
+											</div>
+										</aside>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<div class="dash-tab">
+							<div class="dash-trackers ">
+								<header class="big-title">
+									<span class="title"> <span>Informações sobre do
+											rastreador</span> <img class="show-tooltip"
+										src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/question-mark.png">
+										<aside class="tourtip with-pointer point-up point-up-right"
+											style="display: none;">
+											<img class="tour-card-close close-button"
+												src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+											<p>Estes são todos os rastreadores no site que você está
+												visualizando. Você pode bloquear um rastreador clicando no
+												controle deslizante que se encontra ao lado. Se um controle
+												deslizante estiver verde, esse rastreador encontra-se
+												bloqueado e não consegue rastrear sua atividade de
+												navegação. Observe que alguns rastreadores são permitidos
+												por padrão. Bloqueá-los poderá prejudicar o funcionamento da
+												página web.</p>
+										</aside>
+									</span>
+								</header>
+								<div class="trackers-host">caelum.com.br</div>
+								<div class="trackers-list-header">
+									<span>Nome do rastreador</span> <span
+										class="trackers-toggle-header">Bloqueado?</span>
+								</div>
+								<ul class="trackers-list scrollable">
+									<li class="tracker"><span class="tracker-name">Google
+											Adwords Conversion</span>
+										<div class="onoffswitch">
+											<input id="myonoffswitch-group-Google Adwords Conversion"
+												class="onoffswitch-checkbox" type="checkbox"
+												name="Google Adwords Conversion" checked=""> <label
+												class="onoffswitch-label"
+												for="myonoffswitch-group-Google Adwords Conversion">
+												<div class="onoffswitch-inner"></div>
+												<div class="onoffswitch-switch"></div>
+											</label>
+										</div></li>
+									<li class="tracker"><span class="tracker-name">Doubleclick</span>
+										<div class="onoffswitch">
+											<input id="myonoffswitch-group-Doubleclick"
+												class="onoffswitch-checkbox" type="checkbox"
+												name="Doubleclick" checked=""> <label
+												class="onoffswitch-label"
+												for="myonoffswitch-group-Doubleclick">
+												<div class="onoffswitch-inner"></div>
+												<div class="onoffswitch-switch"></div>
+											</label>
+										</div></li>
+									<li class="tracker"><span class="tracker-name">Google
+											Analytics</span>
+										<div class="onoffswitch">
+											<input id="myonoffswitch-group-Google Analytics"
+												class="onoffswitch-checkbox" type="checkbox"
+												name="Google Analytics"> <label
+												class="onoffswitch-label"
+												for="myonoffswitch-group-Google Analytics">
+												<div class="onoffswitch-inner"></div>
+												<div class="onoffswitch-switch"></div>
+											</label>
+										</div></li>
+								</ul>
+								<hr>
+								<div class="toggle-all">
+									<span class="block-all" style="display: inline;">Bloquear
+										todos os rastreadores</span> <span class="allow-all"
+										style="display: none;">Desbloquear rastreadores</span> <span
+										class="all-blocked" style="display: none;">Todos os
+										rastreadores bloqueados <img
+										src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/switch-on.png">
+									</span> <span class="all-allowed" style="display: none;">Todos
+										os rastreadores bloqueados <img
+										src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/switch-on.png">
+									</span>
+								</div>
+								<footer class="how-many info-text">
+									<img
+										src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/trackers_icon_nb.svg"
+										alt="Trackers"> 50 rastreadores foram bloqueados até o
+									momento.
+								</footer>
+							</div>
+						</div>
+						<div class="dash-tab abs-card abs-settings-card">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+								class="tour-card-close"> <img class="close-button"
+								src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+							</a>
+							<div class="title">Configurações</div>
+							<div class="settings-block">
+								<section class="set">
+									Avira Offers
+									<div class="onoffswitch">
+										<input id="myonoffswitch-offers"
+											class="onoffswitch-checkbox trackers-list-group-switch"
+											type="checkbox" name="offers" checked=""> <label
+											class="onoffswitch-label" for="myonoffswitch-offers">
+											<div class="onoffswitch-inner"></div>
+											<div class="onoffswitch-switch"></div>
+											<div class="black-tip-outer">
+												<div class="black-tip">
+													<div class="inner">
+														<span class="tooltip-on">Desligue para interromper
+															a exibição das melhores ofertas no Avira Browser Safety.</span>
+														<span class="tooltip-off">Ligue para ver melhores
+															ofertas para produtos que você está comprando.</span>
+													</div>
+												</div>
+											</div>
+										</label>
+									</div>
+								</section>
+								<section class="set">
+									Mostrar indicador de segurança
+									<div class="onoffswitch">
+										<input id="myonoffswitch-top_bar"
+											class="onoffswitch-checkbox trackers-list-group-switch"
+											type="checkbox" name="top_bar" checked=""> <label
+											class="onoffswitch-label" for="myonoffswitch-top_bar">
+											<div class="onoffswitch-inner"></div>
+											<div class="onoffswitch-switch"></div>
+										</label>
+									</div>
+								</section>
+							</div>
+							<div class="settings-bottom-block">
+								<a class="settings-support-link"
+									href="http://www.avira.com/pt-br/support-for-home"
+									target="_blank">Ir para suporte</a> <a
+									class="settings-uninstall"
+									href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#settings/General"
+									data-event="Settings - Uninstall">Desinstalar</a>
+							</div>
+							<div class="links">
+								<a href="http://www.avira.com/pt-br/general-privacy"
+									target="_blank">Política de privacidade</a>
+							</div>
+						</div>
+						<div
+							class="dash-tab abs-card abs-card-ftu abs-card-feedback scrollable">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+								class="tour-card-close"> <img class="close-button"
+								src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+							</a>
+							<div class="abs-card-title">Comentários</div>
+							<iframe class="feedback-form"
+								data-src="https://www.avira.com/pt-br/survey-abs-feedback/"></iframe>
+						</div>
+						<div class="dash-tab dash-tab-popup dash-tab-positioned">
+							<div class="dash-offers-underlay"></div>
+							<div class="dash-offers scrollable">
+								<header class="dash-offers-best-container"> </header>
+								<aside class="dash-offers-container"></aside>
+							</div>
+						</div>
+					</div>
+					<div id="ftu-nav"></div>
+				</section>
+			</div>
+			<div id="Tour" class="tour-container">
+				<div class="tourtip-container">
+					<div class="tourtip with-pointer point-up step-classification">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">O Website Safety Advisor</div>
+						<p>Agora poderá ver rapidamente se um site é seguro. Uma marca
+							de seleção verde indica que não foram identificadas ameças. No
+							entanto, se encontrar um site malicioso, você receberá uma
+							advertência</p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#tour/Trackers"
+								class="abs-button mp-track" next="2"
+								data-event="Tour - Classification - next">Avançar</a>
+						</div>
+					</div>
+				</div>
+				<div class="tourtip-container">
+					<div class="tourtip with-pointer point-up step-trackers">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">O Browser Tracking Blocker</div>
+						<p>
+							Monitore sua privacidade online. O Avira Browser Safety bloqueia
+							rastreadores que estão tentando analisar seu perfil.<br>
+							Será exibido um ícone azul quando os rastreadores não tiverem
+							sido bloqueados. Isso pode ocorrer quando eles são necessários
+							para que o site funcione corretamente.
+						</p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#tour/HowToEditTrackers"
+								class="abs-button mp-track" data-event="Tour - Trackers - show">Mostrar
+								mais</a> <a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#tour/Feedback"
+								class="abs-button mp-track" data-event="Tour - Trackers - next">Avançar</a>
+						</div>
+					</div>
+				</div>
+				<div class="tourtip-container">
+					<div class="tourtip with-pointer step-howtoedittrackers">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">Configurações individuais dos
+							rastreadores</div>
+						<p>Você poderá controlar cada rastreador individualmente. Se o
+							controle deslizante ao lado de um rastreador estiver cinza, o
+							rastreador está ativo e rastreando você. Para bloquear este
+							rastreador, mova o controle deslizante para a direita. O controle
+							deslizante ficará verde e o rastreador estará sendo bloqueado.</p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#tour/Feedback"
+								class="abs-button mp-track"
+								data-event="Tour - Trackers - Edit - next">Avançar</a>
+						</div>
+					</div>
+				</div>
+				<div class="tourtip-container">
+					<div class="tourtip with-pointer point-right step-feedback">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">Comentários</div>
+						<p>Encontrou um bug? Tem alguma ideia? Obrigado pelo
+							comentário!</p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+								class="abs-button mp-track" data-event="Tour - Feedback - close">Fechar
+								tour</a>
+						</div>
+					</div>
+				</div>
+				<div class="tourtip-container">
+					<div
+						class="tourtip with-pointer point-up point-up-center step-meetalien">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">Novidades da versão 1.1.13 do ABS</div>
+						<p></p>
+						<p>O Avira Browser Safety está em constante melhoramento com
+							base em seus comentários. Aqui tem as novidades da mais recente
+							versão:</p>
+						<ul>
+							<li>O ABS ocupa agora menos espaço no seu navegador em modo
+								minimizado e expandido. Você pode expandi-lo facilmente passando
+								o mouse pela área verde acima.</li>
+							<li>Removemos a pesquisa integrada enquanto fazemos
+								melhoramentos com base em seus comentários. Fique atento.</li>
+						</ul>
+						<p></p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+								class="abs-button abs-button-primary mp-track"
+								data-event="Tour - New Bar View - OK">OK</a>
+						</div>
+					</div>
+				</div>
+				<div class="tourtip-container">
+					<div
+						class="tourtip with-pointer point-up point-up-center step-meetalien">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">Bem-vindo ao Avira Browser Safety</div>
+						<p>A nova e confiável proteção para o navegador da web do
+							Avira já está ativada. Basta pesquisar e visitar sites; nós
+							iremos protegê-lo.</p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#tour/Classification"
+								class="abs-button abs-button-primary mp-track"
+								data-event="Tour - New - show">Iniciar tour</a> <a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+								class="abs-button mp-track" data-event="Tour - New - next">Não,
+								obrigado</a>
+						</div>
+					</div>
+				</div>
+				<div class="tourtip-container">
+					<div
+						class="tourtip with-pointer point-up point-up-center step-offers">
+						<a
+							href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+							class="tour-card-close"> <img class="close-button"
+							src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/img/dash_close.svg">
+						</a>
+						<div class="tip-title">Receba as melhores ofertas de forma
+							segura</div>
+						<p>O Avira Offers dá a você as melhores ofertas de
+							comerciantes de confiança em produtos que você deseja. Não são
+							coletados seus dados pessoais. O Avira Offers pode ser desligado
+							na página de configurações.</p>
+						<div class="abs-card-buttons">
+							<a
+								href="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html#"
+								class="abs-button abs-button-bigger"
+								data-event="Offers Request - accept">OK</a> <a
+								href="http://www.avira.com/pt-br/avira-offers" id="read-more"
+								class="abs-button abs-button-bigger" target="_blank"
+								data-event="Offers Request - read more">Leia mais</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/js/bunches/app.js"></script>
+
+
+</body>
+</html>

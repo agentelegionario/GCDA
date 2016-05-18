@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>updateCar</from-outcome>
+			<to-view-id>/admin/car/updateCar.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>deleteCar</from-outcome>
+			<to-view-id>/admin/car/deleteCar.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>searchCar</from-outcome>
+			<to-view-id>/admin/car/searchCar.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>newCar</from-outcome>
+			<to-view-id>/admin/car/newCar.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>newDriver</from-outcome>
+			<to-view-id>/admin/driver/newDriver.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>searchDriver</from-outcome>
+			<to-view-id>/admin/driver/searchDriver.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>updateDriver</from-outcome>
+			<to-view-id>/admin/driver/updateDriver.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>deleteDriver</from-outcome>
+			<to-view-id>/admin/driver/deleteDriver.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>searchTravel</from-outcome>
+			<to-view-id>/admin/travel/searchTravel.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>updateTravel</from-outcome>
+			<to-view-id>/admin/travel/updateTravel.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>deleteTravel</from-outcome>
+			<to-view-id>/admin/travel/deleteTravel.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>issueAuthorization</from-outcome>
+			<to-view-id>/admin/travel/issueAuthorization.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+			<!-- <redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	<!-- <navigation-rule> <from-view-id>*</from-view-id> <navigation-case> 
+		<from-outcome>updateBlog</from-outcome> <to-view-id>/blog/updateBlog.xhtml</to-view-id> 
+		<redirect /> </navigation-case> </navigation-rule> -->
+
+
+</faces-config>

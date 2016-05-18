@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0174)http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/introducao-ao-jsf-e-primefaces/#7-12-exercicio-opcional-adicione-paginacao-e-ordenacao-a-tabela -->
+<html lang="pt-BR"
+	class="js svg ratio1x  appcache offline-not-installed">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Introdução ao JSF e Primefaces - Lab. Java com Testes,
+	JSF e Design Patterns</title>
+<script type="text/javascript" async=""
+	src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/ga.js"></script>
+<script type="text/javascript" async="" defer=""
+	src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/goal.min.js"></script>
+<script>document.documentElement.className="js "+(document.createElementNS&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect?"svg ":"no-svg ")+"ratio"+(1.3<window.devicePixelRatio?"2x ":"1x ");</script>
+<link rel="stylesheet"
+	href="http://www.caelum.com.br/style/apostila-aberta.1398456350.css">
+<meta property="og:title"
+	content="Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns">
+<meta property="og:image"
+	content="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/share.png">
+<meta property="og:site_name" content="Apostilas Caelum">
+<meta property="fb:app_id" content="140078819399376">
+<meta itemprop="name"
+	content="Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns">
+<meta itemprop="image"
+	content="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/share.png">
+<meta property="fb:url"
+	content="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/introducao-ao-jsf-e-primefaces/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lab. Java">
+<link rel="apple-touch-icon"
+	href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/share.png">
+<script>"standalone"in navigator&&navigator.standalone&&(document.documentElement.className+=" ios-webapp");</script>
+<script async=""
+	src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/apostila-aberta.1398456350.js"></script>
+</head>
+<body>
+	<script>(function(a){var b=a.createElement("script");b.async=!0;b.src="/script/apostila-aberta.1398456350.js";a=a.getElementsByTagName("script")[0];a.parentNode.appendChild(b,a)})(document);</script>
+	<div role="banner" class="barra-topo ">
+		<div class="barra-offline-update">
+			<div class="container">
+				Nova versão da apostila disponível. <a
+					href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/offline/">Atualizar</a>
+			</div>
+		</div>
+		<div class="container barra-container">
+			<div class="sombra"></div>
+			<div>
+				<a
+					href="http://www.caelum.com.br/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"
+					class="logo"><img
+					src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/caelum-logo-cinza.svg"
+					alt="Caelum"
+					onerror="this.src=this.src.replace(&#39;.svg&#39;, &#39;.png&#39;); this.onerror=null"></a><a
+					href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/"
+					class="book-title" title="Ir para Capa &amp; Sumário da apostila">Apostila
+					Lab. Java com Testes, JSF e Design Patterns</a>
+				<div class="menu-mais">
+					<a
+						href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.caelum.com.br%2Fapostila-java-testes-jsf-web-services-design-patterns%2F"
+						class="share" rel="nofollow" title="Compartilhar no Facebook"><span
+						aria-hidden="true" class="icone-facebook"></span><span class="ir">Compartilhar
+							apostila FJ-22 no Facebook</span></a>
+					<div class="config">
+						<span aria-hidden="true" class="icone-list icone" title="Opções"></span><span
+							tabindex="0" class="ir">Opções</span>
+						<div class="submenu">
+							<section class="submenu-sub">
+								<h3 class="submenu-divisor submenu-label">Navegação</h3>
+								<ul>
+									<li><a
+										href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/"
+										title="Ir para Capa e Sumário da apostila"
+										class="submenu-link"><span aria-hidden="true"
+											class="icone icone-house"></span><span>Capa &amp;
+												Sumário</span></a></li>
+									<li><form>
+											<label for="chapter-nav-select" id="chapter-nav-label"
+												class="submenu-label">Capítulos</label><select
+												class="chapter-nav"
+												title="Navegue nos capítulos da apostila"
+												id="chapter-nav-select" aria-labeledby="chapter-nav-label"><option></option>
+												<option value="../tornando-se-um-desenvolvedor-pragmatico/">
+													1. Tornando-se um desenvolvedor pragmático</option>
+												<option
+													value="../o-modelo-da-bolsa-de-valores-datas-e-objetos-imutaveis/">
+													2. O modelo da bolsa de valores, datas e objetos imutáveis
+												</option>
+												<option value="../testes-automatizados/">3. Testes
+													Automatizados</option>
+												<option value="../trabalhando-com-xml/">4.
+													Trabalhando com XML</option>
+												<option value="../test-driven-design-tdd/">5. Test
+													Driven Design - TDD</option>
+												<option value="../acessando-um-web-service/">6.
+													Acessando um Web Service</option>
+												<option value="../introducao-ao-jsf-e-primefaces/"
+													selected="">7. Introdução ao JSF e Primefaces</option>
+												<option value="../refatoracao-os-indicadores-da-bolsa/">
+													8. Refatoração: os Indicadores da bolsa</option>
+												<option value="../graficos-interativos-com-primefaces/">
+													9. Gráficos interativos com Primefaces</option>
+												<option value="../aplicando-padroes-de-projeto/">
+													10. Aplicando Padrões de projeto</option>
+												<option value="../a-api-de-reflection/">11. A API
+													de Reflection</option>
+												<option
+													value="../apendice-testes-de-interface-com-selenium/">
+													12. Apêndice Testes de interface com Selenium</option></select>
+										</form></li>
+									<li><form action="http://www.caelum.com.br/busca/"
+											method="GET">
+											<input type="hidden" name="apostila" value="FJ-22"><label
+												for="apostila-busca-input" id="apostila-busca-label"
+												class="submenu-label">Busca</label><input type="search"
+												id="apostila-busca-input"
+												aria-labeledby="apostila-busca-label" name="q">
+											<button title="Buscar" class="search-form-action">
+												<span aria-hidden="true" class="icone-search"></span><span
+													class="ir">Buscar</span>
+											</button>
+										</form></li>
+								</ul>
+							</section>
+							<section class="submenu-sub">
+								<h3 class="submenu-divisor submenu-label">Mais</h3>
+								<ul>
+									<li><a
+										href="http://www.caelum.com.br/curso-java-testes-jsf-web-services-design-patterns/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"
+										title="Lab. Java com Testes, JSF e Design Patterns"
+										class="submenu-link"><span aria-hidden="true"
+											class="icone icone-star"></span><span>Curso Caelum
+												dessa apostila</span></a></li>
+									<li><a
+										href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.caelum.com.br%2Fapostila-java-testes-jsf-web-services-design-patterns%2F"
+										rel="nofollow" class="submenu-link"><span
+											aria-hidden="true" class="icone icone-facebook"></span><span>Compartilhar
+												no Facebook</span></a></li>
+									<li><a
+										href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/offline/"
+										class="submenu-link"><span aria-hidden="true"
+											class="icone icone-browser"></span><span class="novo">Leitura
+												offline</span></a></li>
+									<li><a
+										href="http://www.caelum.com.br/apostilas/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral#FJ-22"
+										title="Baixe em PDF, epub e mobi" class="submenu-link"><span
+											aria-hidden="true" class="icone icone-install"></span><span>Download
+												da apostila</span></a></li>
+									<li><a
+										href="http://www.caelum.com.br/apostilas/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"
+										title="Apostilas abertas da Caelum" class="submenu-link"><span
+											aria-hidden="true" class="icone icone-plus"></span><span>Outras
+												apostilas abertas</span></a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div role="main" class="tubaina container">
+		<div class="chapter-header">
+			Capítulo <span>7</span>
+		</div>
+		<h1 class="chapter-title">Introdução ao JSF e Primefaces</h1>
+		<p>
+			<q
+				cite="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/Isaac Asimov">"Eu
+				não temo computadores, eu temo é a falta deles"</q>
+		</p>
+		<p>Durante muitos anos, os usuários se habituaram com aplicações
+			Desktop. Este tipo de aplicação é instalada no computador local e
+			acessa diretamente um banco de dados ou gerenciador de arquivos. As
+			tecnologias típicas para criar uma aplicação Desktop são Delphi, VB
+			(Visual Basic) ou, no mundo Java, Swing.</p>
+		<p>Para o desenvolvedor, a aplicação Desktop é construída com uma
+			série de componentes que a plataforma de desenvolvimento oferece para
+			cada sistema operacional. Esses componentes ricos e muitas vezes
+			sofisticados estão associados a eventos ou procedimentos que executam
+			lógicas de negócio.</p>
+		<p>Problemas de validação de dados são indicados na própria tela
+			sem que qualquer informação do formulário seja perdida. De uma forma
+			natural, esses componentes lembram-se dos dados do usuário, inclusive
+			entre telas e ações diferentes.</p>
+		<p>
+			Nesse tipo de desenvolvimento são utilizados diversos <strong>componentes
+				ricos</strong>, como por exemplo, calendários, menus diversos ou componentes
+			<em>drag and drop</em> (arrastar e soltar). Eles ficam associados a
+			eventos, ou ações, e guardam automaticamente seu estado, já que
+			mantêm os valores digitados pelo usuário.
+		</p>
+		<img
+			src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/cliente-gordo.png"
+			id="cliente-gordo.png" alt="cliente-gordo.png">
+		<p>Esses componentes não estão, contudo, associados exclusivamente
+			ao desenvolvimento de aplicações Desktop. Podemos criar a mesma
+			sensação confortável para o cliente em uma aplicação web, também
+			usando componentes ricos e reaproveitáveis.</p>
+		<img
+			src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/sensacao-de-desktop.png"
+			id="sensacao-de-desktop.png" alt="sensacao-de-desktop.png">
+		<section class="section"
+			data-section="7-1-desenvolvimento-desktop-ou-web">
+			<a name="7-1-desenvolvimento-desktop-ou-web" class="section-anchor"></a>
+			<h2 class="section-title">7.1 - Desenvolvimento desktop ou web?
+			</h2>
+			<p>
+				Existem algumas desvantagens no desenvolvimento desktop. Como cada
+				usuário tem uma cópia integral da aplicação, qualquer alteração
+				precisaria ser propagada para todas as outras máquinas. Estamos
+				usando um <em>cliente gordo</em>, isto é, com muita responsabilidade
+				no lado do cliente.
+			</p>
+			<p>
+				Note que, aqui, estamos chamando de <strong>cliente</strong> a
+				aplicação que está rodando na máquina do usuário.
+			</p>
+			<p>
+				Para piorar, as regras de negócio rodam no computador do usuário.
+				Isso faz com que seja muito mais difícil depurar a aplicação, já que
+				não costumamos ter acesso tão fácil à maquina onde a aplicação está
+				instalada. Em geral, enfrentamos <strong>problemas de
+					manutenção e gerenciabilidade</strong>.
+			</p>
+			<p></p>
+			<h3>O desenvolvimento Web e o protocolo HTTP</h3>
+			Para resolver problemas como esse, surgiram as aplicações baseadas na
+			web. Nessa abordagem há um servidor central onde a aplicação é
+			executada e processada e todos os usuários podem acessá-la através de
+			um cliente simples e do protocolo HTTP.
+			<p>Um navegador web, como Firefox ou Chrome, que fará o papel da
+				aplicação cliente, interpretando HTML, CSS e JavaScript -- que são
+				as tecnologias que ele entende.</p>
+			<p>
+				Enquanto o usuário usa o sistema, o navegador envia requisições (<em>requests</em>)
+				para o lado do servidor (<em>server side</em>), que responde para o
+				computador do cliente (<em>client side</em>). Em nenhum momento a
+				aplicação está salva no cliente: todas as regras da aplicação estão
+				no lado do servidor. Por isso, essa abordagem também foi chamada de
+				<strong>cliente magro</strong> (<em>thin client</em>).
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/cliente-magro.png"
+				id="cliente-magro.png" alt="cliente-magro.png">
+			<p>
+				Isso facilita bastante a manutenção e a gerenciabilidade, pois temos
+				um lugar central e acessível onde a aplicação é executada. Contudo,
+				note que será preciso conhecer HTML, CSS e JavaScript, para fazer a
+				interface com o usuário, e o protocolo <strong>HTTP</strong> para
+				entender a comunicação pela web. E, mais importante ainda, não há
+				mais eventos, mas sim um modelo bem diferente <strong>orientado
+					a requisições e respostas</strong>. Toda essa base precisará ser conhecida
+				pelo desenvolvedor.
+			</p>
+			<p>Comparando as duas abordagens, podemos ver vantagens e
+				desvantagens em ambas. No lado da aplicação puramente Desktop, temos
+				um estilo de desenvolvimento orientado a eventos, usando componentes
+				ricos, porém com problemas de manutenção e gerenciamento. Do outro
+				lado, as aplicações web são mais fáceis de gerenciar e manter, mas
+				precisamos lidar com HTML, conhecer o protocolo HTTP e seguir o
+				modelo requisição/resposta.</p>
+			<p></p>
+			<h3>Mesclando desenvolvimento Desktop e Web</h3>
+			<p>
+				Em vez de desenvolver puramente para desktop, é uma tendência
+				mesclar os dois estilos, aproveitando as vantagens de cada um. Seria
+				um desenvolvimento Desktop para a web, tanto central quanto com
+				componentes ricos, aproveitando o melhor dos dois mundos e
+				abstraindo o protocolo de comunicação. Essa é justamente a ideia dos
+				<strong>frameworks web baseados em componentes</strong>.
+			</p>
+			<p>
+				No mundo Java há algumas opções como <strong>JavaServer
+					Faces</strong> (JSF), Apache Wicket, Vaadin, Tapestry ou GWT da Google.
+				Todos eles são <em>frameworks</em> web baseados em componentes.
+			</p>
+		</section>
+		<section class="section" data-section="7-2-caracteristicas-do-jsf">
+			<a name="7-2-caracteristicas-do-jsf" class="section-anchor"></a>
+			<h2 class="section-title">7.2 - Características do JSF</h2>
+			<p>JSF é uma tecnologia que nos permite criar aplicações Java
+				para Web utilizando componentes visuais pré-prontos, de forma que o
+				desenvolvedor não se preocupe com Javascript e HTML. Basta
+				adicionarmos os componentes (calendários, tabelas, formulários) e
+				eles serão renderizados e exibidos em formato html.</p>
+			<p></p>
+			<h3>Guarda o estado dos componentes</h3>
+			Além disso o estado dos componentes é sempre guardado automaticamente
+			(como veremos mais à frente), criando a característica Stateful. Isso
+			nos permite, por exemplo, criar formulários de várias páginas e
+			navegar nos vários passos dele com o estado das telas sendo mantidos.
+			<p></p>
+			<h3>Separa as camadas</h3>
+			Outra característica marcante na arquitetura do JSF é a separação que
+			fazemos entre as camadas de apresentação e de aplicação. Pensando no
+			modelo MVC, o JSF possui uma camada de visualização bem separada do
+			conjunto de classes de modelo.
+			<p></p>
+			<h3>Especificação: várias implementações</h3>
+			O JSF ainda tem a vantagem de ser uma especificação do Java EE, isto
+			é, todo servidor de aplicações Java tem que vir com uma implementação
+			dela e há diversas outras disponíveis.
+			<p>
+				A implementação mais famosa do JSF e também a implementação de
+				referência, é a Oracle Mojarra disponível em <a
+					href="http://javaserverfaces.java.net/" rel="nofollow">http://javaserverfaces.java.net/</a>.
+				Outra implementação famosa é a MyFaces da <em>Apache Software
+					Foundation</em> em <a href="http://myfaces.apache.org/" rel="nofollow">http://myfaces.apache.org/</a>.
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/spec-e-implementacao.png"
+				id="spec-e-implementacao.png" alt="spec-e-implementacao.png">
+			<p></p>
+			<h3>Primeiros passos com JSF</h3>
+			<p>
+				Nosso projeto utilizará a implementação Mojarra do JSF. Ela já
+				define o modelo de desenvolvimento e oferece alguns componentes bem
+				básicos. Nada além de
+				<code>inputs</code>
+				, botões e
+				<code>ComboBoxes</code>
+				simples.
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/componentes-basicos.png"
+				id="componentes-basicos.png" alt="componentes-basicos.png">
+			<p>Não há componentes sofisticados dentro da especificação e isso
+				é proposital: uma especificação tem que ser estável e as
+				possibilidades das interfaces com o usuário crescem muito
+				rapidamente. A especificação trata do que é fundamental, mas outros
+				projetos suprem o que falta.</p>
+			<p>
+				Para atender a demanda dos desenvolvedores por componentes mais
+				sofisticados, há várias extensões do JSF que seguem o mesmo ciclo e
+				modelo da especificação. Exemplos dessas bibliotecas são <strong>PrimeFaces</strong>,
+				<strong>RichFaces</strong> e <strong>IceFaces</strong>. Todas elas
+				definem componentes JSF que vão muito além da especificação.
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/extensoes.png"
+				id="extensoes.png" alt="extensoes.png">
+			<p>
+				Cada biblioteca oferece <em>ShowCases</em> na web para mostrar seus
+				componentes e suas funcionalidades. Você pode ver o <em>showcase</em>
+				do <strong>PrimeFaces</strong> no endereço <a
+					href="http://www.primefaces.org/" rel="nofollow">http://www.primefaces.org</a>.
+			</p>
+			<p>
+				Na sua <em>demo online</em>, podemos ver uma lista de componentes
+				disponíveis, como inputs, painéis, botões diversos, menus, gráficos
+				e componentes <em>drag &amp; drop</em>, que vão muito além das
+				especificações, ainda mantendo a facilidade de uso:
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/calendar.png"
+				id="calendar.png" alt="calendar.png"><img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/chart.png"
+				id="chart.png" alt="chart.png"><img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/menubar.png"
+				id="menubar.png" alt="menubar.png"><img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/panel.png"
+				id="panel.png" alt="panel.png">
+			<p>
+				Para a definição da interface do projeto <em>Argentum</em> usaremos
+				<strong>Oracle Mojarra</strong> com <strong>PrimeFaces</strong>, uma
+				combinação muito comum no mercado.
+			</p>
+			<p></p>
+			<h3>Preparação do ambiente</h3>
+			<p>
+				Nossa aplicação <em>Argentum</em> precisa de uma interface web. Para
+				isso vamos preparar uma aplicação web comum que roda dentro de um <em>Servlet
+					Container</em>. Qualquer implementação de servlet container seria válida
+				e, no curso, usaremos o <em>Apache Tomcat 7</em>. Uma outra boa
+				opção seria o <em>Jetty</em>.
+			</p>
+			<p></p>
+			<h3>Configuração do controlador do JSF</h3>
+			<p>
+				O JSF segue o padrão arquitetural MVC (<em>Model-View-Controller</em>)
+				e faz o papel do <em>Controller</em> da aplicação. Para começar a
+				usá-lo, é preciso configurar a servlet do JSF no
+				<code>web.xml</code>
+				da aplicação. Esse
+				<code>Servlet</code>
+				é responsável por receber as requisições e delegá-las ao JSF. Para
+				configurá-lo basta adicionar as seguintes configurações no
+				<code>web.xml</code>
+				:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;servlet&gt;</span>
+  <span class="nt">&lt;servlet-name&gt;</span>FacesServlet<span
+							class="nt">&lt;/servlet-name&gt;</span>
+  <span class="nt">&lt;servlet-class&gt;</span>javax.faces.webapp.FacesServlet<span
+							class="nt">&lt;/servlet-class&gt;</span>
+  <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+<span class="nt">&lt;/servlet&gt;</span>
+<span class="nt">&lt;servlet-mapping&gt;</span>
+  <span class="nt">&lt;servlet-name&gt;</span>FacesServlet<span
+							class="nt">&lt;/servlet-name&gt;</span>
+  <span class="nt">&lt;url-pattern&gt;</span>*.xhtml<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="nt">&lt;/servlet-mapping&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>Ao usar o Eclipse com suporte a JSF 2 essa configuração no
+				web.xml já é feita automaticamente durante a criação de um projeto.</p>
+			<p></p>
+			<h3>Faces-config: o arquivo de configuração do mundo JSF</h3>
+			Além disso, há um segundo XML que é o arquivo de configuração
+			relacionado com o mundo JSF, o <strong><code>faces-config.xml</code></strong>.
+			<p>Como o JSF na versão dois encoraja o uso de anotações em vez
+				de configurações no XML, este arquivo torna-se pouco usado. Ele era
+				muito mais importante na primeira versão do JSF. Neste treinamento,
+				deixaremos ele vazio:</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;faces-config</span>
+   <span class="na">xmlns=</span><span class="s">"http://java.sun.com/xml/ns/javaee"</span>
+   <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+   <span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee </span>
+<span class="s">   http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"</span>
+   <span class="na">version=</span><span class="s">"2.0"</span><span
+							class="nt">&gt;</span>
+<span class="nt">&lt;/faces-config&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>Agora já temos as informações necessárias para criar nosso
+				primeiro projeto utilizando JSF.</p>
+		</section>
+		<div class="anuncio">
+			<a
+				href="http://www.caelum.com.br/curso-java-testes-jsf-web-services-design-patterns/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"
+				title="Curso Lab. Java com Testes, JSF e Design Patterns"><h4>Você
+					pode também fazer o curso FJ-22 dessa apostila na Caelum</h4>
+				<img class="icone"
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/caelum_2x.png"
+				width="100" aria-hidden="true">
+			<p>
+					Querendo aprender ainda mais sobre boas práticas de Java, JSF, Web
+					Services, testes e design patterns? Esclarecer dúvidas dos
+					exercícios? Ouvir explicações detalhadas com um instrutor?<br>A
+					Caelum oferece o <strong>curso FJ-22</strong> presencial nas
+					cidades de São Paulo, Rio de Janeiro e Brasília, além de turmas
+					incompany.
+				</p>
+				<p>
+					<span class="action">Consulte as vantagens do curso <em>Lab.
+							Java com Testes, JSF e Design Patterns</em></span>.
+				</p></a>
+		</div>
+		<section class="section"
+			data-section="7-3-exercicios-instalando-o-tomcat-e-criando-o-projeto">
+			<a name="7-3-exercicios-instalando-o-tomcat-e-criando-o-projeto"
+				class="section-anchor"></a>
+			<h2 class="section-title">7.3 - Exercícios: Instalando o Tomcat
+				e criando o projeto</h2>
+			<ol class="exercise">
+				<li class="question"><p>Primeiramente, precisamos instalar
+						o Tomcat. Usaremos a versão 7.x:</p>
+					<ol class="letter">
+						<li>Vá no Desktop e entre na pasta <em>Caelum</em> e em
+							seguida na pasta <em>22</em>.
+						</li>
+						<li>Copie o arquivo zip do TomCat e cole ele na sua pasta
+							Home.</li>
+						<li>Clique com o botão direito e escolha <em>Extract
+								here</em>.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/extract-here.png"
+							id="extract-here.png" alt="extract-here.png"></li>
+						<li>O <em>Tomcat</em> já está pronto para o uso!
+						</li>
+					</ol></li>
+				<li class="question"><p>O próximo passo é criar o nosso
+						projeto no Eclipse.</p>
+					<ol class="letter">
+						<li>Crie um novo projeto web usando o <strong>ctrl +
+								3</strong><em>Dynamic Web Project</em>.
+						</li>
+						<li>Em <em>Project name</em> coloque <code>fj22-argentum-web</code>.
+						</li>
+						<li>Na seção <em>Configuration</em> clique em <em>Modify</em>
+							para acrescentarmos suporte ao JSF.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/modify.png"
+							id="modify.png" alt="modify.png"></li>
+						<li>Na tela que abre, marque o checkbox com <strong>JavaServer
+								Faces 2.0</strong> e clique dê ok:<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/jsf-facet.png"
+							id="jsf-facet.png" alt="jsf-facet.png"></li>
+						<li>De volta à tela de criação do projeto, clique em <strong>Next</strong>.
+							Nessa tela, faremos como no início do curso: removeremos a <em>source
+								folder</em> padrão (<code>src</code>) e adicione as source folders <code>src/main/java</code>
+							e <code>src/test/java</code>.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/source-folders.png"
+							id="source-folders.png" alt="source-folders.png"></li>
+						<li>Dê <em>Next</em> mais duas vezes até chegar à tela de <strong>JSF
+								Capabilities</strong>. Nessa tela, escolha a opção <strong>Disable
+								Library Configuration</strong> para indicarmos para o Eclipse que nós
+							mesmos copiaremos os JARs do JSF.Ainda nessa tela, na parte <em>
+								URL Mapping Patterns</em>, <strong>remova</strong> o mapeamento <em>/faces/*</em>
+							e <strong>adicione</strong> um novo mapeamento como <strong>*.xhtml</strong><img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/opcoes-jsf.png"
+							id="opcoes-jsf.png" alt="opcoes-jsf.png"></li>
+						<li>Clique em <em>Finish</em> e o projeto está criado.
+						</li>
+					</ol></li>
+				<li class="question"><p>O próximo passo é configurar o
+						Tomcat no Eclipse, para que possamos controlá-lo mais facilmente.</p>
+					<ol class="letter">
+						<li>Dentro do Eclipse, abra a view <em>Servers</em>. Para
+							isso, pressione <strong>ctrl + 3</strong>, digite <em>Servers</em>
+							e escolha a view. Ela será aberta na parte inferior do seu
+							Eclipse.
+						</li>
+						<li>Dentro da aba <em>Servers</em> clique com o botão direito
+							do mouse e escolha <em>New -&gt; Server</em>. Se não quiser usar
+							o mouse, você pode fazer <strong>ctrl+3</strong><em>New
+								server</em>.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/new-server.png"
+							id="new-server.png" alt="new-server.png"></li>
+						<li>Dentro da Janela <em>New Server</em> escolha <em>Apache
+								Tomcat v7.0 Server</em> e clique em <em>Next</em>.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/escolhe-server.png"
+							id="escolhe-server.png" alt="escolhe-server.png"></li>
+						<li>O próximo passo é dizermos ao Eclipse em qual diretório
+							instalamos o Tomcat. Clique no botão <em>Browse...</em> e escolha
+							a pasta na qual você descompactou o <em>Tomcat</em>.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/pasta-server.png"
+							id="pasta-server.png" alt="pasta-server.png">
+						</li>
+						<li>Clique em <em>Next</em> e, na próxima tela, selecione o
+							projeto <em>fj22-argentum-web</em> no box <em>Available</em> (da
+							esquerda), pressione o botão <em>Add &gt;</em> (moverá para o box
+							<em>Configured</em> da direita) e depois <em>Finish</em>.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/add-to-server.png"
+							id="add-to-server.png" alt="add-to-server.png"></li>
+						<li>Clique em <em>Finish</em>.
+						</li>
+					</ol></li>
+				<li class="question"><p>
+						Por fim, precisamos importar do projeto anterior as classes como
+						<code>Negociacao</code>
+						ou
+						<code>Candlestick</code>
+						. Já o temos pronto na pasta
+						<code>/caelum/cursos/22/</code>
+						, com o nome de
+						<code>modelo-argentum.zip</code>
+						. Precisamos apenas importá-lo:
+					</p>
+					<ul>
+						<li>Para importá-lo, use <strong>ctrl + 3</strong><em>Archive
+								File</em> e escolha a opção <strong>Import (Archive file)</strong>.
+						</li>
+						<li>Em <em>Browse...</em>, selecione o nosso arquivo <strong>modelo-argentum.zip</strong>
+							e finalize-o.<img
+							src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/importacao.png"
+							id="importacao.png" alt="importacao.png"></li>
+						<li>Note que, com esse import, trouxemos também os jars da
+							implementação Mojarra do JSF e do Primefaces, que usaremos daqui
+							pra frente.</li>
+					</ul>
+					<div class="box">
+						<h4>Para casa...</h4>
+						<p>Se você está fazendo esse exercício em casa, certifique-se
+							que seu projeto anterior está funcionando corretamente e
+							simplesmente copie os pacotes dele para o novo.</p>
+						<p>
+							Não esqueça de copiar também o jar do XStream para a pasta
+							<code>WebContent/WEB-INF/lib/</code>
+							.
+						</p>
+						<p>Além disso, no zip da aula ainda há os jars do JSF e do
+							PrimeFaces, que usaremos a seguir. Nesta versão da apostila
+							estamos usando as versões 2.x.x e 3.5.x, respectivamente. Links
+							para o download:</p>
+						<ul>
+							<li>JSF: <a
+								href="https://javaserverfaces.java.net/download.html">https://javaserverfaces.java.net/download.html</a></li>
+							<li>Primefaces: <a
+								href="http://primefaces.org/downloads.html" rel="nofollow">http://primefaces.org/downloads.html</a></li>
+						</ul>
+					</div></li>
+				<li class="question"><p>
+						Nossas classes de teste (<em>src/test/java</em>) ainda apresentam
+						problemas relacionados ao JUnit. Falta adicioná-lo ao <em>Build
+							Path</em>.
+					</p>
+					<p>
+						Abra a classe <strong>CandlestickFactoryTest</strong> e dê <strong>ctrl
+							+ 1</strong> na anotação <em>@Test</em>. Escolha a opção <em>Add
+							JUnit 4 library to the build path</em>.
+					</p>
+					<img
+					src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/adicionando-o-junit.png"
+					id="adicionando-o-junit.png" alt="adicionando-o-junit.png"></li>
+				<li class="question"><p>
+						Finalmente, para evitar confusões mais para a frente, feche o
+						projeto que fizemos nos outros dias de curso. Clique com o botão
+						direito no fj22-argentum<strong>-base</strong> e escolha a opção <strong>Close
+							project</strong>
+					</p></li>
+			</ol>
+		</section>
+		<section class="section" data-section="7-4-a-primeira-pagina-com-jsf">
+			<a name="7-4-a-primeira-pagina-com-jsf" class="section-anchor"></a>
+			<h2 class="section-title">7.4 - A primeira página com JSF</h2>
+			<p>
+				Como configuramos, na criação do projeto, que o JSF será responsável
+				por responder às requisições com extensão
+				<code>.xhtml</code>
+				. Dessa forma, tabalharemos com arquivos xhtml no restante do curso.
+			</p>
+			<p>
+				Vale relembrar uma diferença fundamental entre as duas formas de
+				desenvolvimento para a web. A abordagem <em>action based</em>, como
+				no SpringMVC e no VRaptor, focam seu funcionamento nas classes que
+				contêm as lógicas. A view é meramente uma camada de apresentação do
+				que foi processado no modelo.
+			</p>
+			<p>
+				Enquanto isso, o pensamento <em>component based</em> adotado pelo
+				JSF leva a view como a peça mais importante -- é a partir das
+				necessidades apontadas pelos componentes da view que o modelo é
+				chamado e populado com dados.
+			</p>
+			<p>
+				As tags que representam os componentes do JSF estão em duas <em>taglibs</em>
+				principais (bibliotecas de tags): a <strong>core</strong> e a <strong>html</strong>.
+			</p>
+			<p>
+				A taglib <em>html</em> contém os componentes necessários para
+				montarmos nossa tela gerando o HTML adequado. Já a <em>core</em>
+				possui diversos componentes não visuais, como tratadores de eventos
+				ou validadores. Por ora, usaremos apenas os componentes da <em>h:html</em>
+			</p>
+			<p></p>
+			<h3>Importando as tags em nossa página</h3>
+			Diferente da forma importação de taglibs em JSPs que vimos no curso
+			de Java para a web (FJ-21), para importar as tags no JSF basta
+			declararmos seus namespaces no arquivo
+			<code>.xhtml</code>
+			. Dessa forma, teremos:
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" </span>
+<span class="cp">  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+							class="s">"http://www.w3.org/1999/xhtml"</span>
+    <span class="na">xmlns:h=</span><span class="s">"http://java.sun.com/jsf/html"</span><span
+							class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- aqui usaremos as tags do JSF --&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p></p>
+			<h3>Definindo a interface da aplicação</h3>
+			Como qualquer outro aprendizado de tecnologia, vamos começar a
+			explorar o JSF criando nossa primeira tela com uma mensagem de boas
+			vindas para o usuário.
+			<p>
+				Como todo arquivo HTML, todo o cabeçalho deve estar dentro da tag
+				<code>head</code>
+				e o que será renderizado no navegador deve ficar dentro da tag
+				<code>body</code>
+				. Uma página padrão para nós seria algo como:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;html</span> <span class="err">...</span><span
+							class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- cabeçalho aqui --&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- informações a serem mostradas --&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Quando estamos lidando com o JSF, no entanto, precisamos nos lembrar
+				de utilizar preferencialmente as tags do próprio framework, já que,
+				à medida que utilizarmos componentes mais avançados, o JSF precisará
+				gerenciar os próprios <em>body</em> e <em>head</em> para, por
+				exemplo, adicionar CSS e javascript que um componente requisitar.
+			</p>
+			<p>
+				Assim, usando JSF preferiremos utilizar as tags estruturais do HTML
+				que vêm da taglib <a href="http://java.sun.com/jsf/html"
+					rel="nofollow">http://java.sun.com/jsf/html</a>, nosso html vai
+				ficar mais parecido com esse:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;html</span> <span class="err">...</span><span
+							class="nt">&gt;</span>
+  <span class="nt">&lt;h:head&gt;</span>
+    <span class="c">&lt;!-- cabeçalho aqui --&gt;</span>
+  <span class="nt">&lt;/h:head&gt;</span>
+  <span class="nt">&lt;h:body&gt;</span>
+    <span class="c">&lt;!-- informações a serem mostradas --&gt;</span>
+  <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p></p>
+			<h3>Mostrando informações com h:outputText</h3>
+			Como queremos mostrar uma saudação para o visitante da nossa página,
+			podemos usar a tag
+			<code>h:outputText</code>
+			. É através do seu atributo
+			<code>value</code>
+			que definimos o texto que será apresentado na página.
+			<p>Juntando tudo, nosso primeiro exemplo é uma tela simples com
+				um texto:</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" </span>
+<span class="cp">  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+							class="s">"http://www.w3.org/1999/xhtml"</span>
+    <span class="na">xmlns:h=</span><span class="s">"http://java.sun.com/jsf/html"</span><span
+							class="nt">&gt;</span>
+
+  <span class="nt">&lt;h:head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Argentum Web<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/h:head&gt;</span>
+  <span class="nt">&lt;h:body&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value =</span><span
+							class="s">"Olá JSF!"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+				</div>
+			</pre>
+		</section>
+		<section class="section"
+			data-section="7-5-interagindo-com-o-modelo-managed-beans">
+			<a name="7-5-interagindo-com-o-modelo-managed-beans"
+				class="section-anchor"></a>
+			<h2 class="section-title">7.5 - Interagindo com o modelo:
+				Managed Beans</h2>
+			<p>
+				O
+				<code>h:outputText</code>
+				é uma tag com um propósito aparentemente muito bobo e, no exemplo
+				acima, é exatamente equivalente a simplesmente escrevermos "Olá
+				JSF!" diretamente. E, de fato, para textos fixos, não há problema em
+				escrevê-lo diretamente!
+			</p>
+			<p>Contudo, se um pedaço de texto tiver que interagir com o
+				modelo, uma lógica ou mesmo com outros componentes visuais, será
+				necessário que ele também esteja guardado em um componente.</p>
+			<p>
+				Exemplos dessas interações, no caso do
+				<code>h:outputText</code>
+				: mostrar informações vindas de um banco de dados, informações do
+				sistema, horário de acesso, etc.
+			</p>
+			<p>
+				Para mostrar tais informações, precisaremos executar um código Java
+				e certamente não faremos isso na camada de visualização: esse código
+				ficará separado da <em>view</em>, em uma classe de modelo. Essas
+				classes de modelo que interagem com os componentes do JSF são os <strong>Managed
+					Beans</strong>.
+			</p>
+			<p>
+				Estes, são apenas classezinhas simples que com as quais o JSF
+				consegue interagir através do acesso a seus métodos. Nada mais são
+				do que POJOs anotados com
+				<code>@ManagedBean</code>
+				.
+			</p>
+			<div class="box">
+				<h4>POJO (Plain Old Java Object)</h4>
+				<p>
+					<em>POJO</em> é um termo criado por Martin Fowler, Rebecca Parsons
+					e Josh Mackenzie que serve para definir um objeto simples. Segundo
+					eles, o termo foi criado pois ninguém usaria objetos simples nos
+					seus projetos pois não existia um nome extravagante para ele.
+				</p>
+			</div>
+			<p>Se quisermos, por exemplo, mostrar quando foi o acesso do
+				usuário a essa página, podemos criar a seguinte classe:</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+							class="nc">OlaMundoBean</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="n">String</span> <span
+							class="nf">getHorario</span><span class="o">()</span> <span
+							class="o">{</span>
+    <span class="n">SimpleDateFormat</span> <span class="n">sdf</span> <span
+							class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span
+							class="o">(</span><span class="s">"hh:mm:ss"</span><span
+							class="o">);</span>
+    <span class="k">return</span> <span class="s">"Atualizado em "</span> <span
+							class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span
+							class="na">format</span><span class="o">(</span><span class="k">new</span> <span
+							class="n">Date</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				E, bem semelhantemente à forma padrão nas JSPs vistas no treinamento
+				de Java para a Web, acessaremos o <em>getter</em> através da <em>Expression
+					Language</em>. Existe apenas uma pequena diferença: para chamar os
+				métodos no JSF, em vez do cifrão (
+				<code>$</code>
+				), usaremos a cerquilha (
+				<code>#</code>
+				).
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+							class="s">"#{olaMundoBean.horario}"</span> <span class="nt">/&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Ao fazer colocar o código acima, estamos dizendo que há uma classe
+				gerenciada pelo JSF chamada <strong>OlaMundoBean</strong> que tem um
+				método
+				<code>getHorario</code>
+				-- e que o retorno desse método será mostrado na página. É uma forma
+				extremamente simples e elegante de ligar a <em>view</em> a métodos
+				do <em>model</em>.
+			</p>
+		</section>
+		<div class="anuncio">
+			<a href="http://www.guj.com.br/perguntas/" title="GUJ Perguntas"
+				rel="nofollow"><h4>Tire suas dúvidas no novo GUJ Respostas</h4>
+				<img class="icone"
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/guj_2x.png"
+				width="100" aria-hidden="true">
+			<p>
+					O GUJ é um dos principais fóruns brasileiros de computação e o
+					maior em português sobre Java. A nova versão do GUJ é baseada em
+					uma ferramenta de <i>perguntas e respostas</i> (QA) e tem uma
+					comunidade muito forte. São mais de 150 mil usuários pra ajudar
+					você a esclarecer suas dúvidas.
+				</p>
+				<p>
+					<span class="action">Faça sua pergunta</span>.
+				</p></a>
+		</div>
+		<section class="section"
+			data-section="7-6-recebendo-informacoes-do-usuario">
+			<a name="7-6-recebendo-informacoes-do-usuario" class="section-anchor"></a>
+			<h2 class="section-title">7.6 - Recebendo informações do usuário
+			</h2>
+			<p>Agora que já sabemos conectar a página à camada de modelo,
+				fica fácil obter dados do usuário! Por nossa vivência com aplicações
+				web, até mesmo como usuários, sabemos que a forma mais comum de
+				trazer tais dados para dentro da aplicação é através de formulários.</p>
+			<p>
+				A boa notícia é que no JSF não será muito diferente! Se para mostrar
+				dados na página usamos a tag
+				<code>h:outputText</code>
+				, para trazer dados do usuário para dentro da aplicação, usaremos a
+				tag
+				<code>h:inputText</code>
+				. Ela fará a ligação entre o atributo do seu bean e o valor digitado
+				no campo.
+			</p>
+			<p>Note que a ideia é a mesma de antes: como o JSF precisará
+				interagir com os dados desse componente, não podemos usar a tag HTML
+				que faria o mesmo trabalho. Em vez disso, usaremos a taglib de HTML
+				provida pelo próprio JSF, indicando como a informação digitada será
+				guardada no bean.</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;h:outputLabel</span> <span class="na">value=</span><span
+							class="s">"Digite seu nome:"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;h:inputText</span> <span class="na">value=</span><span
+							class="s">"#{olaMundoBean.nome}"</span><span class="nt">/&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Apenas com esse código, já podemos ver o texto <em>Digite seu
+					nome</em> e o campo de texto onde o usuário digitará. Sabemos, no
+				entanto, que não faz sentido ter apenas um campo de texto! É preciso
+				ter também um botão para o usuário confirmar que acabou de digitar o
+				nome e um formulário para agrupar todas essas tags.
+			</p>
+			<p></p>
+			<h3>Botão e o formulário em JSF</h3>
+			Esse é um pequeno ponto de divergência entre o HTML puro e o JSF. Em
+			um simples formulário HTML, configuramos a <em>action</em> dele na
+			própria tag
+			<code>form</code>
+			e o papel do botão é apenas o de mandar executar a ação já
+			configurada.
+			<p>Para formulários extremamente simples, isso é o bastante. Mas
+				quando queremos colocar dois botões com ações diferentes dentro de
+				um mesmo formulário, temos que recorrer a um JavaScript que fará a
+				chamada correta.</p>
+			<p>Como dito antes, no entanto, o JSF tem a proposta de abstrair
+				todo o protocolo HTTP, o JavaScript e o CSS. Para ter uma estrutura
+				em que o formulário é marcado apenas como um agregador de campos e
+				cada um dos botões internos pode ter funções diferentes, a
+				estratégia do JSF foi a de deixar seu form como uma tag simples e
+				adicionar a configuração da ação ao próprio botão.</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;h:form&gt;</span>
+  <span class="nt">&lt;h:outputLabel</span> <span class="na">for=</span><span
+							class="s">"nome"</span> <span class="na">value=</span><span
+							class="s">"Digite seu nome:"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;h:inputText</span> <span class="na">id=</span><span
+							class="s">"nome"</span> <span class="na">value=</span><span
+							class="s">"#{olaMundoBean.nome}"</span><span class="nt">/&gt;</span>
+<span class="hll">  <span class="nt">&lt;h:commandButton</span> <span
+							class="na">value=</span><span class="s">"Ok"</span> <span
+							class="na">action=</span><span class="s">"#{olaMundoBean.digaOi}"</span><span
+							class="nt">/&gt;</span>
+</span><span class="nt">&lt;/h:form&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Quando o usuário clica no botão <em>Ok</em>, o JSF chama o setter do
+				atributo nome do
+				<code>OlaMundoBean</code>
+				e, logo em seguida, chama o método
+				<code>digaOi</code>
+				. Repare que esta ordem é importante: o método provavelmente
+				dependerá dos dados inseridos pelo usuário.
+			</p>
+			<p>
+				Note, também, que teremos um novo método no <em>managed bean</em>
+				chamado
+				<code>digaOi</code>
+				. Os botões sempre estão atrelados a métodos porque, na maior parte
+				dos casos, realmente queremos executar alguma ação além da chamada
+				do setter. Essa ação pode ser a de disparar um processo interno,
+				salvar no banco ou qualquer outra necessidade.
+			</p>
+			<div class="box">
+				<h4>O que fazer enquanto não ainda houver informação?</h4>
+				<p>Sabendo que, antes de chamar o método correspondente à ação
+					do botão, o JSF preenche os atributos através dos setters, sabemos
+					que teremos a informação a ser mostrada para o usuário.</p>
+				<p>
+					No entanto, muitas vezes não gostaríamos de mostrar um campo
+					enquanto ele não estiver preenchido e, felizmente, o JSF tem uma
+					forma bastante simples de só mostrar um
+					<code>h:outputText</code>
+					na tela apenas se a informação estiver preenchida! Basta usar o
+					atributo
+					<code>rendered</code>
+					:
+				</p>
+				<pre>
+					<div class="highlight">
+						<pre>
+							<span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+								class="s">"Oi #{olaMundoBean.nome}"</span>
+<span class="hll">        <span class="na">rendered=</span><span
+								class="s">"#{not empty olaMundoBean.nome}"</span><span
+								class="nt">/&gt;</span>
+</span>
+						</pre>
+					</div>
+				</pre>
+			</div>
+		</section>
+		<section class="section"
+			data-section="7-7-exercicios-os-primeiros-componentes-jsf">
+			<a name="7-7-exercicios-os-primeiros-componentes-jsf"
+				class="section-anchor"></a>
+			<h2 class="section-title">7.7 - Exercícios: Os primeiros
+				componentes JSF</h2>
+			<ol class="exercise">
+				<li class="question"><p>
+						Use <strong>ctrl + N</strong><em>HTML</em> para criar o arquivo
+						<code>olaMundo.xhtml</code>
+						na pasta
+						<code>WebContent</code>
+						da sua aplicação. Escolha <em>Next</em> e, na próxima tela,
+						escolha o template <em>xhtml 1.0 transitional</em>, usualmente a
+						última opção da lista:
+					</p>
+					<img
+					src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/transitional.png"
+					id="transitional.png" alt="transitional.png">
+				<p>
+						Selecione a mesma opção da imagem acima e pressione <em>Finish</em>.
+					</p>
+					<p>Implemente nosso primeiro código JSF com apenas uma saída de
+						texto:</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</span>
+<span class="cp">    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+									class="s">"http://www.w3.org/1999/xhtml"</span>
+    <span class="na">xmlns:h=</span><span class="s">"http://java.sun.com/jsf/html"</span><span
+									class="nt">&gt;</span>
+  <span class="nt">&lt;h:head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Argentum<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/h:head&gt;</span>
+
+  <span class="nt">&lt;h:body&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"Ola Mundo"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Inicie o Tomcat e acesse a URL:
+						<code>
+							<a href="http://localhost:8080/fj22-argentum-web/olaMundo.xhtml"
+								rel="nofollow">http://localhost:8080/fj22-argentum-web/olaMundo.xhtml</a>
+						</code>
+					</p></li>
+				<li class="question"><p>
+						Verifique o código fonte gerado pela página. Repare que ele não é
+						nada mais que simples HTML. Para isso, na maior parte dos
+						navegadores, use <strong>ctrl + U</strong>.
+					</p>
+					<p>
+						Repare no uso das tags
+						<code>&lt;h:head&gt;</code>
+						,
+						<code>&lt;h:body&gt;</code>
+						e
+						<code>&lt;h:outputText&gt;</code>
+						: elas não aparecem no html gerado! Sua função é apenas indicar
+						para o JSF como gerar o código HTML necessário para o exemplo
+						funcionar.
+					</p></li>
+				<li class="question"><p>
+						Além de usar mensagens fixas, poderíamos fazer com que a mensagem
+						seja devolvida de uma classe responsável por prover objetos para
+						uma view: um dos chamados
+						<code>ManagedBean</code>
+						s. Vamos começar criando essa classe contendo apenas a mensagem
+						inicial.
+					</p>
+					<p>
+						Crie uma classe chamada
+						<code>OlaMundoBean</code>
+						, com apenas o atributo
+						<code>mensagem</code>
+						já inicializada, seu getter e não esqueça de <strong>anotar
+							a classe</strong> com %@ManagedBean%%%
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+									class="nc">OlaMundoBean</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="n">String</span> <span
+									class="n">mensagem</span> <span class="o">=</span> <span
+									class="s">"Quem é você?"</span><span class="o">;</span>
+  
+  <span class="kd">public</span> <span class="n">String</span> <span
+									class="nf">getMensagem</span><span class="o">()</span> <span
+									class="o">{</span>
+    <span class="k">return</span> <span class="n">mensagem</span><span
+									class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Alteremos o arquivo xhtml, então, para que ele use a mensagem <em>Quem
+							é você?</em> que escrevemos <em>hard-coded</em> na classe
+						<code>OlaMundoBean</code>
+						. Usaremos a <em>Expression Language</em> específica do JSF para
+						isso, que é capaz de pegar informações de qualquer classe
+						configurada como um
+						<code>ManagedBean</code>
+						.
+					</p>
+					<p>
+						Basta alterar o <em>value</em> da tag
+						<code>h:outputText</code>
+						:
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>...
+<span class="nt">&lt;h:body&gt;</span>
+<span class="hll">  <span class="nt">&lt;h:outputText</span> <span
+									class="na">value=</span><span class="s">"#{olaMundoBean.mensagem}"</span> <span
+									class="nt">/&gt;</span>
+</span><span class="nt">&lt;/h:body&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>Agora, se quisermos pegar a
+						resposta do usuário e cumprimentá-lo propriamente, podemos
+						adicionar à nossa página um campo de texto para que o usuário
+						digite seu nome. Então, trocaremos a mensagem cumprimentando ele.
+						Comecemos pelas alterações no olaMundo.xhtml, adicionando um
+						h:inputText e um botão para o usuário enviar seu nome, como
+						abaixo.</p>
+					<p>
+						<strong>Atenção!</strong> Não esqueça da tag <strong>h:form</strong>
+						em volta do formulário. Lembre-se que, sem ela, os botões não
+						funcionam.
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>...
+<span class="nt">&lt;h:body&gt;</span>
+<span class="hll">  <span class="nt">&lt;h:form&gt;</span>
+</span>    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{olaMundoBean.mensagem}"</span> <span class="nt">/&gt;&lt;br</span> <span
+									class="nt">/&gt;</span>
+<span class="hll">    <span class="nt">&lt;h:inputText</span> <span
+									class="na">value=</span><span class="s">"#{olaMundoBean.nome}"</span> <span
+									class="nt">/&gt;</span>
+</span><span class="hll">    <span class="nt">&lt;h:commandButton</span> <span
+									class="na">action=</span><span class="s">"#{olaMundoBean.nomeFoiDigitado}"</span> 
+</span><span class="hll">             <span class="na">value=</span><span
+									class="s">"Ok"</span><span class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/h:form&gt;</span>
+</span><span class="nt">&lt;/h:body&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Essa alteração, no entanto, não é suficiente. Se você rodar o
+						servidor agora, notará que a página, que antes funcionava, agora
+						lança uma
+						<code>ServletException</code>
+						informando que <em>Property 'nome' not found on type
+							br.com.caelum.argentum.bean.OlaMundoBean</em>.
+					</p>
+					<p>
+						Isto é, falta adicionarmos o atributo nome e seu getter à página,
+						como fizemos com a mensagem, no outro exercício. Adicione à classe
+						<code>OlaMundoBean</code>
+						o atributo e seu getter.
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+									class="nc">OlaMundoBean</span> <span class="o">{</span>
+  <span class="o">...</span>
+  <span class="kd">private</span> <span class="n">String</span> <span
+									class="n">nome</span><span class="o">;</span>
+  
+  <span class="kd">public</span> <span class="n">String</span> <span
+									class="nf">getNome</span><span class="o">()</span> <span
+									class="o">{</span>
+    <span class="k">return</span> <span class="n">nome</span><span
+									class="o">;</span>
+  <span class="o">}</span>
+  <span class="o">...</span>
+<span class="o">}</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Agora sim podemos ver a mensagem, o campo de texto e o botão.
+						Contudo, ao apertar o botão, levamos uma
+						<code>javax.el.PropertyNotFoundException</code>
+						informando que nome é um atributo não alterável.
+					</p>
+					<p>
+						Faltou adicionarmos o setter do atributo à
+						<code>OlaMundoBean</code>
+						, para que o JSF possa preenchê-lo! Além disso, o botão chamará o
+						método
+						<code>nomeFoiDigitado</code>
+						, que também não existe ainda.
+					</p>
+					<p>
+						Complete a classe com o setter faltante e o método
+						<code>nomeFoiDigitado</code>
+						, reinicie o servidor e teste!
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+									class="nc">OlaMundoBean</span> <span class="o">{</span>
+  <span class="c1">// ...tudo o que já existia aqui</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span
+									class="nf">setNome</span><span class="o">(</span><span
+									class="n">String</span> <span class="n">nome</span><span
+									class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">nome</span> <span
+									class="o">=</span> <span class="n">nome</span><span class="o">;</span>
+  <span class="o">}</span>
+  
+  <span class="kd">public</span> <span class="kt">void</span> <span
+									class="nf">nomeFoiDigitado</span><span class="o">()</span> <span
+									class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span
+									class="na">out</span><span class="o">.</span><span class="na">println</span><span
+									class="o">(</span><span class="s">"\nChamou o botão"</span><span
+									class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						(Opcional) Para entender melhor o ciclo de execução de cada
+						chamada ao JSF, adicione
+						<code>System.out.println("nome do método")</code>
+						a cada um dos métodos da sua aplicação e veja a ordem das chamadas
+						pelo console do Eclipse.
+					</p></li>
+			</ol>
+		</section>
+		<section class="section" data-section="7-8-a-lista-de-negociacoes">
+			<a name="7-8-a-lista-de-negociacoes" class="section-anchor"></a>
+			<h2 class="section-title">7.8 - A lista de negociações</h2>
+			<p>Agora que já aprendemos o básico do JSF, nosso objetivo é
+				listar em uma página as negociações do web service que o Argentum
+				consome. Nessa listagem, queremos mostrar as informações das
+				negociações carregadas -- isto é, queremos uma forma de mostrar
+				preço, quantidade e data de cada negociação. E a forma mais natural
+				de apresentar dados desse tipo é, certamente, uma tabela.</p>
+			<p>Até poderíamos usar a tabela que vem na taglib padrão do JSF,
+				mas ela é bastante limitada e não tem pré-definições de estilo. Isto
+				é, usando a taglib padrão, teremos sim uma tabela no HTML, mas ela
+				será mostrada da forma mais feia e simples possível.</p>
+			<p>Já falamos, contudo, que a proposta do JSF é abstrair toda a
+				complexidade relativa à web -- e isso inclui CSS, formatações,
+				JavaScript e tudo o mais. Então, em apoio às tags básicas, algumas
+				bibliotecas mais sofisticadas surgiram. As mais conhecidas delas são
+				PrimeFaces, RichFaces e IceFaces.</p>
+			<p>Taglibs como essas oferecem um visual mais bacana já
+				pré-pronto e, também, diversas outras facilidades. Por exemplo, uma
+				tabela que utilize as tags do Primefaces já vem com um estilo
+				bonito, possibilidade de colocar cabeçalhos nas colunas e até
+				recursos mais avançados como paginação dos registros.</p>
+			<p>
+				O componente responsável por produzir uma tabela baseada em um
+				modelo se chama
+				<code>dataTable</code>
+				. Ele funciona de forma bem semelhante ao
+				<code>for</code>
+				do Java 5 ou o
+				<code>forEach</code>
+				da JSTL: itera em uma lista de elementos atribuindo cada item na
+				variável definida.
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+							class="s">"http://www.w3.org/1999/xhtml"</span> 
+    <span class="na">xmlns:h=</span><span class="s">"http://java.sun.com/jsf/html"</span> 
+<span class="hll">    <span class="na">xmlns:p=</span><span
+							class="s">"http://primefaces.org/ui"</span><span class="nt">&gt;</span>
+</span>  <span class="nt">&lt;h:head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Argentum<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/h:head&gt;</span>
+  <span class="nt">&lt;h:body&gt;</span>
+    <span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+							class="s">"negociacao"</span> <span class="na">value=</span><span
+							class="s">"#{argentumBean.negociacoes}"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;/p:dataTable&gt;</span>
+  <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				O código acima chamará o método
+				<code>getNegociacoes</code>
+				da classe
+				<code>ArgentumBean</code>
+				e iterará pela lista devolvida atribuindo o objeto à variável
+				<code>negociacao</code>
+				. Então, para cada coluna que quisermos mostrar, será necessário
+				apenas manipular a negociação do momento.
+			</p>
+			<p>
+				E, intuitivamente o bastante, cada coluna da tabela será
+				representada pela tag
+				<code>p:column</code>
+				. Para mostrar o valor, você pode usar a tag que já vimos antes, o
+				<code>h:outputText</code>
+				. Note que as tags do Primefaces se integram perfeitamente com as
+				básicas do JSF.
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+							class="s">"negociacao"</span> <span class="na">value=</span><span
+							class="s">"#{argentumBean.negociacoes}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+							class="s">"Preço"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+							class="s">"#{negociacao.preco}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/p:column&gt;</span>
+  ... outras colunas
+<span class="nt">&lt;/p:dataTable&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Falta ainda implementar a classe que cuidará de devolver essa lista
+				de negociações. O código acima sugere que tenhamos uma classe
+				chamada
+				<code>ArgentumBean</code>
+				, gerenciada pelo JSF, que tenha um getter de negociações que pode,
+				por exemplo, trazer essa lista direto do
+				<code>ClienteWebService</code>
+				que fizemos anteriormente:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+							class="nc">ArgentumBean</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="n">List</span><span
+							class="o">&lt;</span><span class="n">Negociacao</span><span
+							class="o">&gt;</span> <span class="n">getNegociacoes</span><span
+							class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span
+							class="nf">ClienteWebService</span><span class="o">().</span><span
+							class="na">getNegociacoes</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Da forma acima, o exemplo já funciona e você verá a lista na página.
+				No entanto, nesse exemplo simples o JSF chamará o método
+				<code>getNegociacoes</code>
+				duas vezes durante uma mesma requisição. Isso não seria um problema
+				se ele fosse um getter padrão, que devolve uma referência local, mas
+				note como nosso
+				<code>getNegociacoes</code>
+				vai buscar a lista diretamente no web service. Isso faz com que,
+				para construir uma simples página, tenhamos que esperar a resposta
+				do serviço... duas vezes!
+			</p>
+			<p>
+				Esse comportamento não é interessante. Nós gostaríamos que o
+				Argentum batesse no serviço em busca dos dados apenas uma vez por
+				requisição, e não a cada vez que o JSF chame o <em>getter</em>. Isso
+				significa que o acesso ao serviço não pode estar diretamente no
+				método
+				<code>getNegociacoes</code>
+				, que deve apenas devolver a lista pré-carregada.
+			</p>
+			<p>
+				No JSF, o comportamento padrão diz que um objeto do
+				<code>ManagedBean</code>
+				dura por uma requisição. Em outras palavras, o escopo padrão dos <em>beans</em>
+				no JSF é o de requisição. Isso significa que um novo
+				<code>ArgentumBean</code>
+				será criado a cada vez que um usuário chamar a página da listagem.
+				E, para cada chamada a essa página, precisamos buscar a lista de
+				negociações no serviço apenas uma vez. A resposta para esse
+				problema, então, é bastante simples e apareceu logo no início do
+				aprendizado do Java orientado a objetos.
+			</p>
+			<p>
+				Basta colocar a chamada do web service naquele bloco de código que é
+				chamado apenas na criação do objeto, isto é, no construtor. Ao
+				armazenar a listagem em um atributo, o <em>getter</em> de
+				negociações passa a simplesmente devolver a referência, evitando as
+				múltiplas chamadas a cada requisição.
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+							class="nc">ArgentumBean</span> <span class="o">{</span>
+  
+  <span class="kd">private</span> <span class="n">List</span><span
+							class="o">&lt;</span><span class="n">Negociacao</span><span
+							class="o">&gt;</span> <span class="n">negociacoes</span><span
+							class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">ArgentumBean</span><span
+							class="o">()</span> <span class="o">{</span>
+    <span class="n">ClienteWebService</span> <span class="n">cliente</span> <span
+							class="o">=</span> <span class="k">new</span> <span class="n">ClienteWebService</span><span
+							class="o">();</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">negociacoes</span> <span
+							class="o">=</span> <span class="n">cliente</span><span class="o">.</span><span
+							class="na">getNegociacoes</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="n">List</span><span
+							class="o">&lt;</span><span class="n">Negociacao</span><span
+							class="o">&gt;</span> <span class="n">getNegociacoes</span><span
+							class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span
+							class="o">.</span><span class="na">negociacoes</span><span
+							class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Juntando as informações dessa seção, já conseguimos montar a
+				listagem de negociações com os dados vindos do <em>web service</em>.
+				E o processo será muito frequentemente o mesmo para as diversas
+				outras telas: criamos a página usando as tags do Primefaces em
+				complemento às básicas do JSF, implementamos a classe que cuidará da
+				lógica por trás da tela e a anotamos com
+				<code>@ManagedBean</code>
+				.
+			</p>
+		</section>
+		<div class="anuncio">
+			<a
+				href="http://www.casadocodigo.com.br/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"
+				title="Editora Casa do Código"><h4>Nova editora Casa do
+					Código com livros de uma forma diferente</h4>
+				<img class="icone"
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/casa-do-codigo_2x.png"
+				width="93" aria-hidden="true">
+			<p>
+					Editoras tradicionais pouco ligam para ebooks e novas tecnologias.
+					Não conhecem programação para revisar os livros tecnicamente a
+					fundo. Não têm anos de experiência em didáticas com cursos.<br>Conheça
+					a <strong>Casa do Código</strong>, uma editora diferente, com
+					curadoria da <strong>Caelum</strong> e obsessão por livros de
+					qualidade a preços justos.
+				</p>
+				<p>
+					<span class="action">Casa do Código, ebook com preço de
+						ebook</span>.
+				</p></a>
+		</div>
+		<section class="section" data-section="7-9-formatacao-de-data-com-jsf">
+			<a name="7-9-formatacao-de-data-com-jsf" class="section-anchor"></a>
+			<h2 class="section-title">7.9 - Formatação de Data com JSF</h2>
+			<p>
+				A tabela já é funcional, mas com a data mal formatada. O componente
+				não sabe como gostaríamos de formatar a data e chama por de baixo
+				dos planos o método
+				<code>toString</code>
+				da data para receber uma apresentação como
+				<code>String</code>
+				.
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/data-nao-formatada.png"
+				id="data-nao-formatada.png" alt="data-nao-formatada.png">
+			<p>
+				A forma clássica de resolver esse problema seria através de um
+				getter que traria a data formatada por um
+				<code>SimpleDateFormat</code>
+				. Mas, assim como a JSTL vista no curso de Java para a Web, o JSF
+				também tem uma tag para formatar valores, números e, claro, datas.
+				Essas tags e muitas outras, são parte da biblioteca fundamental de
+				tags lógicas do JSF e, para usá-las, será necessário importar tal
+				taglib.
+			</p>
+			<p>Assim como as bibliotecas de tags de HTML e do Primefaces,
+				para utilizar essas será necessário declará-las no namespace da sua
+				página.</p>
+			<p>
+				Daí, podemos facilmente mudar a forma padrão de exibição usando o
+				componente de formatação
+				<code>f:convertDateTime</code>
+				que define um <em>pattern</em> para a data. É importante lembrar
+				que, internamente, o
+				<code>f:convertDateTime</code>
+				acaba fazendo uma chamada ao
+				<code>SimpleDateFormat</code>
+				e, assim, só podemos formatar objetos do tipo
+				<code>java.util.Date</code>
+				com ele. Por essa razão, chamaremos o método <em>getTime</em> que
+				devolve a representação em
+				<code>Date</code>
+				do
+				<code>Calendar</code>
+				em questão. Mais uma vez podemos omitir a palavra "get" com
+				expression language. Segue a tabela completa:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+							class="s">"http://www.w3.org/1999/xhtml"</span> 
+<span class="hll">    <span class="na">xmlns:f=</span><span
+							class="s">"http://java.sun.com/jsf/core"</span> 
+</span>    <span class="na">xmlns:h=</span><span class="s">"http://java.sun.com/jsf/html"</span>
+    <span class="na">xmlns:p=</span><span class="s">"http://primefaces.org/ui"</span><span
+							class="nt">&gt;</span>
+
+  <span class="nt">&lt;h:body&gt;</span>
+    <span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+							class="s">"negociacao"</span> <span class="na">value=</span><span
+							class="s">"#{argentumBean.negociacoes}"</span><span class="nt">&gt;</span>
+
+      ... outras colunas, e então:
+      <span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+							class="s">"Data"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+							class="s">"#{negociacao.data.time}"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;f:convertDateTime</span> <span class="na">pattern=</span><span
+							class="s">"dd/MM/yyyy"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/h:outputText&gt;</span>
+      <span class="nt">&lt;/p:column&gt;</span>
+    <span class="nt">&lt;/p:dataTable&gt;</span>
+  <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+				</div>
+			</pre>
+		</section>
+		<section class="section"
+			data-section="7-10-exercicios-p-datatable-para-listar-as-negociacoes-do-web-service">
+			<a
+				name="7-10-exercicios-p-datatable-para-listar-as-negociacoes-do-web-service"
+				class="section-anchor"></a>
+			<h2 class="section-title">7.10 - Exercícios: p:dataTable para
+				listar as Negociações do Web Service</h2>
+			<ol class="exercise">
+				<li class="question"><p>
+						Use <strong>ctrl + N</strong><em>HTML</em> para criar um novo
+						arquivo na pasta
+						<code>WebContent</code>
+						chamado
+						<code>olaMundo.xhtml</code>
+						. Como já fizemos antes, clique em <em>Next</em> e, na tela
+						seguinte, escolha o template <em>xhtml 1.0 transitional</em>.
+					</p>
+					<p>O Eclipse vai gerar um arquivo com um pouco de informações a
+						mais, mas ainda muito parecido com o seguinte, onde mudamos o
+						title:</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+									class="s">"http://www.w3.org/1999/xhtml"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Argentum Web<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+  
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Como vamos usar o JSF nesse arquivo e já temos até mesmo o JAR
+						primefaces-3.x.jar adicionado ao projeto (veja em
+						<code>WebContent/WEB-INF/lib</code>
+						) basta declarar os namespaces das taglibs do JSF e do Primefaces,
+						que usaremos no exercício.
+					</p>
+					<p>Além disso, para que os componentes consigam incluir seu CSS
+						à nossa página, altere as tags head e body de forma a usar suas
+						versões gerenciadas pelo JSF:</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span
+									class="s">"http://www.w3.org/1999/xhtml"</span> 
+    <span class="na">xmlns:h=</span><span class="s">"http://java.sun.com/jsf/html"</span> 
+    <span class="na">xmlns:p=</span><span class="s">"http://primefaces.org/ui"</span><span
+									class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;h:head&gt;</span>
+</span>    <span class="nt">&lt;title&gt;</span>Argentum Web<span class="nt">&lt;/title&gt;</span>
+<span class="hll">  <span class="nt">&lt;/h:head&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;h:body&gt;</span>
+</span>  
+<span class="hll">  <span class="nt">&lt;/h:body&gt;</span>
+</span><span class="nt">&lt;/html&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Agora, <strong>dentro do h:body</strong>, vamos começar a montar
+						nossa tabela de negociações. O componente que usaremos para isso é
+						o
+						<code>p:datatable</code>
+						, do Primefaces. Ele precisará da lista de negociações e, assim
+						como um
+						<code>forEach</code>
+						, uma variável para que cada coluna seja preenchida.
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+									class="s">"negociacao"</span> <span class="na">value=</span><span
+									class="s">"#{argentumBean.negociacoes}"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/p:dataTable&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Esse código acima diz que o componente
+						<code>dataTable</code>
+						do Primefaces chamará o método
+						<code>getNegociacoes()</code>
+						da classe
+						<code>ArgentumBean</code>
+						e, para cada linha da tabela, disponibilizará a negociação da vez
+						na variável
+						<code>negociacao</code>
+						.
+					</p>
+					<p>
+						O problema é que o managed bean
+						<code>ArgentumBean</code>
+						ainda não existe e, claro, nem o método
+						<code>getNegociacoes()</code>
+						dela. E como cada vez que a página
+						<code>index.xhtml</code>
+						for requisitada ela fará algumas chamadas ao
+						<code>getNegociacoes</code>
+						, faremos a chamada ao <em>webservice</em> no construtor e, a cada
+						chamada ao getter, apenas devolveremos a referência à mesma lista.
+					</p>
+					<ol class="letter">
+						<li>Crie a classe <code>ArgentumBean</code> com <strong>ctrl
+								+ N</strong><em>Class</em>, no pacote <code>br.com.caelum.argentum.bean</code>
+							e anote ela com <code>@ManagedBean</code>.<pre>
+								<div class="highlight">
+									<pre>
+										<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+											class="nc">ArgentumBean</span> <span class="o">{</span>
+
+<span class="o">}</span>
+</pre>
+								</div>
+							</pre></li>
+						<li>Adicione o construtor que faça a chamada ao webservice
+							através do <code>ClienteWebservice</code>, guarde a lista em um
+							atributo e crie o getter que o componente chamará.<pre>
+								<div class="highlight">
+									<pre>
+										<span class="nd">@ManagedBean</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+											class="nc">ArgentumBean</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="n">List</span><span
+											class="o">&lt;</span><span class="n">Negociacao</span><span
+											class="o">&gt;</span> <span class="n">negociacoes</span><span
+											class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">ArgentumBean</span><span
+											class="o">()</span> <span class="o">{</span>
+    <span class="n">negociacoes</span> <span class="o">=</span> <span
+											class="k">new</span> <span class="n">ClienteWebService</span><span
+											class="o">().</span><span class="na">getNegociacoes</span><span
+											class="o">();</span>
+  <span class="o">}</span>
+  
+  <span class="kd">public</span> <span class="n">List</span><span
+											class="o">&lt;</span><span class="n">Negociacao</span><span
+											class="o">&gt;</span> <span class="n">getNegociacoes</span><span
+											class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">negociacoes</span><span
+											class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre>
+								</div>
+							</pre>
+						</li>
+					</ol></li>
+				<li class="question"><p>Agora, nossa página já não dá erro,
+						mas nada é mostrado na tela, quando a acessamos. Falta indicarmos
+						quais colunas queremos na nossa tabela -- no nosso caso: preço,
+						quantidade, volume e data. Em cada coluna, adicionaremos um título
+						e cada uma delas também mostrará o valor de texto.</p>
+					<p>
+						Para criar a coluna com o título, usaremos o componente
+						<code>p:column</code>
+						e, como já fizemos antes, para mostrar o valor necessário,
+						usaremos a
+						<code>h:outputText</code>
+						.
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+									class="s">"negociacao"</span> <span class="na">value=</span><span
+									class="s">"#{argentumBean.negociacoes}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+									class="s">"Preço"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{negociacao.preco}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/p:column&gt;</span>    
+  <span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+									class="s">"Quantidade"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{negociacao.quantidade}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/p:column&gt;</span>    
+  <span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+									class="s">"Volume"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{negociacao.volume}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/p:column&gt;</span>    
+  <span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+									class="s">"Data"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{negociacao.data}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/p:column&gt;</span>
+<span class="nt">&lt;/p:dataTable&gt;</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Reinicie o Tomcat e acesse em seu navegador o endereço
+						<code>
+							<a href="http://localhost:8080/fj22-argentum-web/index.xhtml"
+								rel="nofollow">http://localhost:8080/fj22-argentum-web/index.xhtml</a>
+						</code>
+						. O resultado deve ser algo parecido com:
+					</p>
+					<img
+					src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/dataTable-dataZuada.png"
+					id="dataTable-dataZuada.png" alt="dataTable-dataZuada.png"></li>
+				<li class="question"><p>As informações de preço, quantidade
+						e volume estão legíveis, mas a data das negociações está mostrando
+						um monte de informações que não nos interessam. Na verdades, o que
+						precisamos na coluna data é de informações de dia, mês, ano e, no
+						máximo, horário de cada movimentação.</p>
+					<p>
+						<strong>Adicione</strong> a tag
+						<code>f:convertDateTime</code>
+						à coluna da data. Essa tag modificará o comportamento da
+						<code>h:outputText</code>
+						para mostrá-lo formatado de acordo com o padrão passado. Note que
+						a tag h:outputText passará a ser fechada depois da formatação da
+						data:
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>...
+<span class="nt">&lt;p:column</span> <span class="na">headerText=</span><span
+									class="s">"Data"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{negociacao.data.time}"</span><span class="nt">&gt;</span>
+<span class="hll">    <span class="nt">&lt;f:convertDateTime</span> <span
+									class="na">pattern=</span><span class="s">"dd/MM/yyyy"</span><span
+									class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;/h:outputText&gt;</span>
+</span><span class="nt">&lt;/p:column&gt;</span>
+...
+</pre>
+						</div>
+					</pre></li>
+			</ol>
+		</section>
+		<section class="section"
+			data-section="7-11-para-saber-mais-paginacao-e-ordenacao">
+			<a name="7-11-para-saber-mais-paginacao-e-ordenacao"
+				class="section-anchor"></a>
+			<h2 class="section-title">7.11 - Para saber mais: paginação e
+				ordenação</h2>
+			<p>
+				O componente
+				<code>p:dataTable</code>
+				sabe listar items, mas não pára por aí. Ele já vem com várias outras
+				funcionalidades frequentemente necessárias em tabelas já prontas e
+				fáceis de usar.
+			</p>
+			<p></p>
+			<h3>Muitos dados</h3>
+			<p>Por exemplo, quando um programa traz uma quantidade muito
+				grande de dados, isso pode causar uma página pesada demais para o
+				usuário que provavelmente nem olhará com atenção todos esses dados.</p>
+			<p>Uma solução clássica para resultados demais é mostrá-los aos
+				poucos, apenas conforme o usuário indicar que quer ver os próximos
+				resultados. Estamos, é claro, falando da paginação dos resultados e
+				o componente de tabelas do Primefaces já a disponibiliza!</p>
+			<p>
+				Para habilitar a paginação automática, basta adicionar o atributo
+				<code>paginator="true"</code>
+				à sua
+				<code>p:dataTable</code>
+				e definir a quantidade de linhas por página pelo atributo
+				<code>rows</code>
+				. A definição da tabela de negociações para paginação de 15 em 15
+				resultados ficará assim:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+							class="s">"negociacao"</span> <span class="na">value=</span><span
+							class="s">"#{argentumBean.negociacoes}"</span> 
+<span class="hll">       <span class="na">paginator=</span><span
+							class="s">"true"</span> <span class="na">rows=</span><span
+							class="s">"15"</span><span class="nt">&gt;</span>
+</span>
+  <span class="c">&lt;!-- colunas omitidas --&gt;</span>
+<span class="nt">&lt;/p:dataTable&gt;</span>
+</pre>
+				</div>
+			</pre>
+			<p>
+				Essa pequena mudança já traz uma visualização mais legal para o
+				usuário, mas estamos causando um problema silencioso no servidor. A
+				cada vez que você chama uma página de resultados, a cada requisição,
+				o
+				<code>ArgentumBean</code>
+				é recriado e perdemos a lista anterior. Assim, na criação da nova
+				instância de
+				<code>ArgentumBean</code>
+				, seu construtor é chamado e acessamos novamente o webservice.
+			</p>
+			<p>Como recebemos a lista completa do webservice, podíamos
+				aproveitar a mesma lista para todas as páginas de resultado e,
+				felizmente, isso também é bastante simples.</p>
+			<p>
+				O comportamento padrão de um
+				<code>ManagedBean</code>
+				é durar apenas uma requisição. Em outras palavras, o escopo padrão
+				de um
+				<code>ManagedBean</code>
+				é de <em>request</em>. Com apenas uma anotação podemos alterar essa
+				duração. Os três principais escopos do JSF são:
+			</p>
+			<a id="Escopos do JSF"></a>
+			<ul>
+				<li><strong>RequestScoped:</strong> é o escopo padrão. A cada
+					requisição um novo objeto do bean será criado;</li>
+				<li><strong>ViewScoped:</strong> escopo da página. Enquanto o
+					usuário estiver na mesma página, o bean é mantido. Ele só é
+					recriado quando acontece uma navegação em sí, isto é, um botão abre
+					uma página diferente ou ainda quando acessamos novamente a página
+					atual.</li>
+				<li><strong>SessionScoped:</strong> escopo de sessão. Enquanto
+					a sessão com o servidor não expirar, o mesmo objeto do <code>ArgentumBean</code>
+					atenderá o mesmo cliente. Esse escopo é bastante usado, por
+					exemplo, para manter o usuário logado em aplicações.</li>
+			</ul>
+			<p>
+				No nosso caso, o escopo da página resolve plenamente o problema:
+				enquanto o usuário não recarregar a página usaremos a mesma
+				listagem. Para utilizá-lo, basta adicionar ao <em>bean</em> a
+				anotação
+				<code>@ViewScoped</code>
+				. No exemplo do Argentum:
+			</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="nd">@ManagedBean</span>
+<span class="nd">@ViewScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span
+							class="nc">ArgentumBean</span> <span class="o">{</span>
+  <span class="o">...</span>
+</pre>
+				</div>
+			</pre>
+			<p></p>
+			<h3>Tirando informações mais facilmente</h3>
+			<p>Outra situação clássica que aparece quando lidamos com
+				diversos dados é precisarmos vê-los de diferentes formas em
+				situações diversas.</p>
+			<p>Considere um sistema que apresenta uma tabela de contatos. Se
+				quisermos encontrar um contato específico nela, é melhor que ela
+				esteja ordenada pelo nome. Mas caso precisemos pegar os contatos de
+				todas as pessoas de uma região, é melhor que a tabela esteja
+				ordenada, por exemplo, pelo DDD.</p>
+			<p>Essa ideia de ordenação é extremamente útil e muito presente
+				em aplicações. Como tal, essa funcionalidade também está disponível
+				para tabelas do Primefaces. Apenas, como podemos tornar diversar
+				colunas ordenáveis, essa configuração fica na tag da coluna.</p>
+			<p>
+				Para tornar uma coluna ordenável, é preciso adicionar um simples
+				atributo
+				<code>sortBy</code>
+				à tag
+				<code>h:column</code>
+				correspondente. Esse atributo torna o cabeçalho dessa coluna em um
+				elemento clicável e, quando clicarmos nele, chamará a ordenação.
+			</p>
+			<a id="h:form"></a>
+			<p>
+				Contudo, exatamente pela presença de elementos clicáveis, será
+				necessário colocar a tabela dentro de uma estrutura que comporte
+				botões em HTML: um formulário. E, como quem configurará o que cada
+				clique vai disparar é o JSF, será necessário usar o formulário da
+				taglib de HTML dele. Resumidamente, precisamos colocar a tabela
+				inteira dentro do componente
+				<code>h:form</code>
+				.
+			</p>
+			<p>Se quiséssemos tornar ordenáveis as colunas da tabela de
+				negociações, o resultado final seria algo como:</p>
+			<pre>
+				<div class="highlight">
+					<pre>
+						<span class="hll"><span class="nt">&lt;h:form</span> <span
+							class="na">id=</span><span class="s">"listaNegociacao"</span><span
+							class="nt">&gt;</span>
+</span>  <span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+							class="s">"negociacao"</span> <span class="na">value=</span><span
+							class="s">"#{argentumBean.negociacoes}"</span><span class="nt">&gt;</span>
+
+<span class="hll">    <span class="nt">&lt;p:column</span> <span
+							class="na">sortBy=</span><span class="s">"#{negociacao.preco}"</span> <span
+							class="na">headerText=</span><span class="s">"Preço"</span> <span
+							class="nt">&gt;</span>
+</span>       <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+							class="s">"#{negociacao.preco}"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/p:column&gt;</span>
+
+    <span class="c">&lt;!-- outras colunas omitidas --&gt;</span>
+  <span class="nt">&lt;/p:dataTable&gt;</span>
+<span class="hll"><span class="nt">&lt;h:form&gt;</span>
+</span>
+					</pre>
+				</div>
+			</pre>
+			<p>
+				Se permitirmos ordenar por qualquer coluna do modelo
+				<code>Negociacao</code>
+				, teremos um resultado bem atraente:
+			</p>
+			<img
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/tabela-com-ordenacao.png"
+				id="tabela-com-ordenacao.png" alt="tabela-com-ordenacao.png">
+			<p>
+				Note que não foi necessário adicionar código algum à classe
+				ArgentumBean! Note também que é até possível usar ambas as
+				funcionalidades na mesma tabela. E essas são apenas algumas das
+				muitas facilidades que o
+				<code>p:dataTable</code>
+				oferece. Vale a pena verificar o <em>showcase</em> e documentação no
+				site do Primefaces.
+			</p>
+		</section>
+		<div class="anuncio">
+			<a href="http://www.alura.com.br/" title="Cursos online Alura"
+				rel="nofollow"><h4>Já conhece os cursos online Alura?</h4>
+				<img class="icone"
+				src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/caelum-online_2x.png"
+				width="123" aria-hidden="true">
+			<p>
+					A <strong>Alura</strong> oferece dezenas de <strong>cursos
+						online</strong> em sua plataforma exclusiva de ensino que favorece o
+					aprendizado com a <strong>qualidade</strong> reconhecida da Caelum.
+					Você pode escolher um curso nas áreas de Java, Ruby, Web, Mobile,
+					.NET e outros, com uma <strong>assinatura</strong> que dá acesso a
+					todos os cursos.
+				</p>
+				<p>
+					<span class="action">Conheça os cursos online Alura</span>.
+				</p></a>
+		</div>
+		<section class="section"
+			data-section="7-12-exercicio-opcional-adicione-paginacao-e-ordenacao-a-tabela">
+			<a
+				name="7-12-exercicio-opcional-adicione-paginacao-e-ordenacao-a-tabela"
+				class="section-anchor"></a>
+			<h2 class="section-title">7.12 - Exercício opcional: adicione
+				paginação e ordenação à tabela</h2>
+			<ol class="exercise">
+				<li class="question"><p>
+						Vamos colocar paginação na tabela. Adicione os atributos
+						<code>paginator="true"</code>
+						e
+						<code>rows="15"</code>
+						. Adicione os atributos
+						<code>paginator</code>
+						e
+						<code>rows</code>
+						:
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nt">&lt;p:dataTable</span> <span class="na">var=</span><span
+									class="s">"negociacao"</span> <span class="na">value=</span><span
+									class="s">"#{argentumBean.negociacoes}"</span> 
+<span class="hll">  <span class="na">paginator=</span><span
+									class="s">"true"</span> <span class="na">rows=</span><span
+									class="s">"15"</span><span class="nt">&gt;</span>
+</span>
+							</pre>
+						</div>
+					</pre>
+					<p>
+						Salve a página, suba o servidor e acesse no seu navegador o
+						endereço
+						<code>
+							<a href="http://localhost:8080/fj22-argentum-web/index.xhtml"
+								rel="nofollow">http://localhost:8080/fj22-argentum-web/index.xhtml</a>
+						</code>
+						. Agora você já consegue ver resultados paginados de 15 em 15
+						negociações:
+					</p>
+					<img
+					src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/dataTable-paginada.png"
+					id="dataTable-paginada.png" alt="dataTable-paginada.png"></li>
+				<li class="question"><p>
+						Para evitar chamar o webservice a cada vez que pedimos os próximos
+						resultados paginados, <strong>adicione</strong> a anotação
+						<code>@ViewScoped</code>
+						à classe
+						<code>ArgentumBean</code>
+						:
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nd">@ManagedBean</span>
+<span class="hll"><span class="nd">@ViewScoped</span>
+</span><span class="kd">public</span> <span class="kd">class</span> <span
+									class="nc">ArgentumBean</span> <span class="o">{</span>
+  <span class="o">...</span>
+<span class="o">}</span>
+</pre>
+						</div>
+					</pre></li>
+				<li class="question"><p>
+						Deixe as colunas ordenáveis, use o atributo
+						<code>sortBy</code>
+						em cada atributo. Por exemplo, para a coluna que mostra o preço da
+						negociação:
+					</p>
+					<pre>
+						<div class="highlight">
+							<pre>
+								<span class="nt">&lt;p:column</span> <span class="na">sortBy=</span><span
+									class="s">"#{negociacao.preco}"</span> <span class="na">headerText=</span><span
+									class="s">"Preço"</span> <span class="nt">&gt;</span>
+   <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span
+									class="s">"#{negociacao.preco}"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/p:column&gt;</span>
+</pre>
+						</div>
+					</pre>
+					<p>
+						Repare que usamos a <em>expression language</em>
+						<code>#{negociacao.preco}</code>
+						do JSF dentro do
+						<code>sortBy</code>
+						para definir o valor a ordenar.
+					</p>
+					<p>Salve a página e veja o resultado recarregando a página (F5)
+						no seu navegador.</p></li>
+			</ol>
+			<div class="box">
+				<h4>h:form sempre usará HTTP POST</h4>
+				<p>
+					É importante saber que diferente da tag
+					<code>form</code>
+					no HTML, o
+					<code>h:form</code>
+					sempre envia uma requisição HTTP do tipo <em>POST</em>. Ele nem nos
+					dá a possibilidade de escolher usar requisições GET.
+				</p>
+				<p>
+					Isso ocorre porque o JSF tenta abstrair o mundo HTTP e assim fica
+					mais perto do desenvolvimento Desktop tradicional. Ele esconde do
+					desenvolvedor o fato de que uma URL está sendo chamada. Em vez
+					disso, para o desenvolvedor, é como se botões efetivamente
+					chamassem métodos ou eventos dentro de um <em>Managed Bean</em>.
+				</p>
+				<p>A decisão automática pelo POST foi a forma encontrada para
+					abstrair o HTTP.</p>
+			</div>
+		</section>
+	</div>
+	<nav role="navigation" class="nav-simple container">
+		<div class="nav-simple-item">
+			<p class="nav-simple-type">Capítulo anterior:</p>
+			<a
+				href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/acessando-um-web-service/"
+				class="nav-simple-chapter"><span>Acessando um Web Service</span></a>
+		</div>
+		<div class="nav-simple-item">
+			<p class="nav-simple-type">Próximo capítulo:</p>
+			<a
+				href="http://www.caelum.com.br/apostila-java-testes-jsf-web-services-design-patterns/refatoracao-os-indicadores-da-bolsa/"
+				class="nav-simple-chapter"><span>Refatoração: os
+					Indicadores da bolsa</span></a>
+		</div>
+	</nav>
+	<div class="container comunidade">
+		<h2 class="comunidade-chamada">Você encontra a Caelum também em:</h2>
+		<ul class="comunidade-itens">
+			<li class="comunidade-item comunidade-blog"><a
+				href="http://blog.caelum.com.br/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"><span
+					class="sp-comunidade sp-comunidade-blog"></span>
+				<h3>Blog Caelum</h3></a></li>
+			<li class="comunidade-item comunidade-online"><a
+				href="http://www.alura.com.br/" rel="nofollow"><span
+					class="sp-comunidade sp-comunidade-online"></span>
+				<h3>Cursos Online</h3></a></li>
+			<li class="comunidade-item comunidade-facebook"><a
+				href="http://facebook.com/caelumbr" rel="nofollow"><span
+					class="sp-comunidade sp-comunidade-facebook"></span>
+				<h3>Facebook</h3></a></li>
+			<li class="comunidade-item comunidade-newsletter"><a
+				href="http://www.caelum.com.br/newsletter/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"><span
+					class="sp-comunidade sp-comunidade-newsletter"></span>
+				<h3>Newsletter</h3></a></li>
+			<li class="comunidade-item comunidade-editora"><a
+				href="http://casadocodigo.com.br/?utm_source=Apostila_HTML&utm_campaign=FJ-22&utm_medium=referral"><span
+					class="sp-comunidade sp-comunidade-editora"></span>
+				<h3>Casa do Código</h3></a></li>
+			<li class="comunidade-item comunidade-twitter"><a
+				href="http://twitter.com/caelum" rel="nofollow"><span
+					class="sp-comunidade sp-comunidade-twitter"></span>
+				<h3>Twitter</h3></a></li>
+		</ul>
+	</div>
+	<script>document.write('\x3ciframe src\x3d"http://4026389.fls.doubleclick.net/activityi;src\x3d4026389;type\x3dconve651;cat\x3d;ord\x3d'+1E13*Math.random()+'?" width\x3d"1" height\x3d"1" frameborder\x3d"0" style\x3d"display:none"\x3e\x3c/iframe\x3e');</script>
+	<iframe src="about:blank" width="1" height="1" frameborder="0"
+		style="display: none"></iframe>
+	<noscript>&lt;iframe
+		src="http://4026389.fls.doubleclick.net/activityi;src=4026389;type=conve651;cat=;ord=1?"
+		width=1 height=1 frameborder=0 style="display:none"&gt;&lt;/iframe&gt;</noscript>
+	<script>var google_conversion_id=995678627,google_conversion_label="DYcgCO3T_gMQo7Pj2gM",google_custom_params=window.google_tag_params,google_remarketing_only=!0;</script>
+	<script
+		src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/conversion.js"></script>
+	<noscript>&lt;div style="display:inline;"&gt;&lt;img
+		height=1 width=1 style="border-style:none;" alt=""
+		src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/995678627/?value=0&amp;amp;label=DYcgCO3T_gMQo7Pj2gM&amp;amp;guid=ON&amp;amp;script=0"&gt;&lt;/div&gt;</noscript>
+	<script>var $mcGoal={settings:{uuid:"422bed2b74623ede65048a641",dc:"us1"}};(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.defer=!0;a.src=("https:"==document.location.protocol?"https://s3.amazonaws.com/downloads.mailchimp.com":"http://downloads.mailchimp.com")+"/js/goal.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+</body>
+<iframe allowtransparency="true" frameborder="0" id="abs-top-frame"
+	src="./Introdução ao JSF e Primefaces - Lab. Java com Testes, JSF e Design Patterns_files/top.html"
+	style="position: fixed; z-index: 4294967295; overflow: hidden; top: 0px; left: 0px; right: 0px; width: 138px; height: 13px; max-height: none; min-height: 0px; margin: 0px auto; padding: 0px; border: 0px; display: block; background-color: transparent;"></iframe>
+</html>

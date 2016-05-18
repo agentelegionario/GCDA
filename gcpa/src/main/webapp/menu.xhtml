@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+
+	<ui:composition>
+		<ui:component>
+			<h:form>
+	     		#{login.isLogged()}
+				<p:menubar>
+					<p:menuitem value="Início" icon="ui-icon-home"
+						url="/faces/index.xhtml" />
+
+					<p:submenu label="Veículo" icon="ui-icon-gear">
+						<p:menuitem value="Adicionar Veículo"
+							url="/faces/admin/car/newCar.xhtml" icon="ui-icon-circle-plus" />
+						<p:menuitem value="Listar Veículos"
+							url="/faces/admin/car/searchCar.xhtml" icon="ui-icon-note" />
+					</p:submenu>
+
+					<p:submenu label="Motorista" icon="ui-icon-gear">
+						<p:menuitem value="Adicionar Motorista"
+							url="/faces/admin/driver/newDriver.xhtml"
+							icon="ui-icon-circle-plus" />
+						<p:menuitem value="Listar Motoristas"
+							url="/faces/admin/driver/searchDriver.xhtml" icon="ui-icon-note" />
+					</p:submenu>
+
+					<p:submenu label="Viagem" icon="ui-icon-gear">
+						<p:menuitem value="Adicionar Viagem"
+							url="/faces/admin/travel/newTravel.xhtml"
+							icon="ui-icon-circle-plus" />
+						<p:menuitem value="Listar Viagem"
+							url="/faces/admin/travel/searchTravel.xhtml" icon="ui-icon-note" />
+					</p:submenu>
+
+					<p:menuitem value="Suporte" url="#" icon="ui-icon-help" />
+
+					<f:facet name="options">
+						<p:inputText style="margin-right:10px" placeholder="Search" />
+						<p:outputLabel value="Olá #{login.usuario.nome} "></p:outputLabel>
+						<p:commandButton value="Logout" icon="ui-icon-extlink"
+							action="#{login.logout()}" />
+					</f:facet>
+				</p:menubar>
+				<div></div>
+			</h:form>
+		</ui:component>
+	</ui:composition>
+
+</h:body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14135814405840" configfile="/CavCar/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1522" id="pf14140204963376" referenceLink="//@navigationRule.12/@fromViewId|" outlinks="pf14140204963377 pf14146277859210 pf14146277859211 pf14147140833360 pf14152255564480 pf14152264158862 pf14154045403630 pf14154045403631 pf14154045403632 pf14190232692430 pf14190233125382 pf14231809581400 pf14236950042920" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/car/updateCar.xhtml" x="338" y="178" id="pf14140204963378" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14140204963377" path="/admin/car/updateCar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/car/deleteCar.xhtml" x="338" y="562" id="pf14146277859212" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14146277859210" path="/admin/car/deleteCar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/car/searchCar.xhtml" x="338" y="946" id="pf14146277859213" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14146277859211" path="/admin/car/searchCar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/car/newCar.xhtml" x="338" y="1330" id="pf14147140833361" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14147140833360" path="/admin/car/newCar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/driver/newDriver.xhtml" x="338" y="1714" id="pf14152255564681" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf14152255564480" path="/admin/driver/newDriver.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/driver/searchDriver.xhtml" x="338" y="2098" id="pf14152264158863" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf14152264158862" path="/admin/driver/searchDriver.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/driver/updateDriver.xhtml" x="338" y="2482" id="pf14154045403633" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf14154045403630" path="/admin/driver/updateDriver.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/driver/deleteDriver.xhtml" x="338" y="2866" id="pf14154045403634" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" inlinks="pf14154045403631" path="/admin/driver/deleteDriver.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/travel/searchTravel.xhtml" id="pf14154045403635" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" inlinks="pf14154045403632" path="/admin/travel/searchTravel.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/travel/updateTravel.xhtml" id="pf14190232692441" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" inlinks="pf14190232692430" path="/admin/travel/updateTravel.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/travel/deleteTravel.xhtml" id="pf14190233125383" referenceLink="//@navigationRule.10/@navigationCase.0/@toViewId|" inlinks="pf14190233125382" path="/admin/travel/deleteTravel.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin/travel/issueAuthorization.xhtml" id="pf14231809581401" referenceLink="//@navigationRule.11/@navigationCase.0/@toViewId|" inlinks="pf14231809581400" path="/admin/travel/issueAuthorization.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf14236950042921" referenceLink="//@navigationRule.12/@navigationCase.0/@toViewId|" inlinks="pf14236950042920" path="/index.xhtml"/>
+  <links id="pf14140204963377" target="pf14140204963378" source="pf14140204963376" outcome="updateCar"/>
+  <links id="pf14146277859210" target="pf14146277859212" source="pf14140204963376" outcome="deleteCar"/>
+  <links id="pf14146277859211" target="pf14146277859213" source="pf14140204963376" outcome="searchCar"/>
+  <links id="pf14147140833360" target="pf14147140833361" source="pf14140204963376" outcome="newCar"/>
+  <links id="pf14152255564480" target="pf14152255564681" source="pf14140204963376" outcome="newDriver"/>
+  <links id="pf14152264158862" target="pf14152264158863" source="pf14140204963376" outcome="searchDriver"/>
+  <links id="pf14154045403630" target="pf14154045403633" source="pf14140204963376" outcome="updateDriver"/>
+  <links id="pf14154045403631" target="pf14154045403634" source="pf14140204963376" outcome="deleteDriver"/>
+  <links id="pf14154045403632" target="pf14154045403635" source="pf14140204963376" outcome="searchTravel"/>
+  <links id="pf14190232692430" target="pf14190232692441" source="pf14140204963376" outcome="updateTravel"/>
+  <links id="pf14190233125382" target="pf14190233125383" source="pf14140204963376" outcome="deleteTravel"/>
+  <links id="pf14231809581400" target="pf14231809581401" source="pf14140204963376" outcome="issueAuthorization"/>
+  <links id="pf14236950042920" target="pf14236950042921" source="pf14140204963376" outcome="index"/>
+</pageflow:Pageflow>

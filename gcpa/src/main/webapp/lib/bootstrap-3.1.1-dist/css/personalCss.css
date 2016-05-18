@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+.personalWidth {
+	max-width: 1000px !important;
+	margin: 0 auto;
+}
+
+.personalHeight {
+	min-height: 600px;
+}
